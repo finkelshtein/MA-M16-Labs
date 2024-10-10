@@ -103,7 +103,7 @@
     "href": "Lab2.html#section-8",
     "title": "Lab 2",
     "section": "3.2 ",
-    "text": "3.2 \n\nSuppose we tossed the coin n_trials = 10 times. Generate a list called series that would contain outputs of all these trials, e.g.\n\n\n['t', 't', 't', 'h', 't', 'h', 't', 't', 'h', 'h']\n\n\n(your output will be probably different).\nAdvice: it may be more convenient to use list comprehension instead of loops, though it’s up to you. Recall that range(10) command generates 10 numbers from 0 to 9.\nCount the number of “heads” in series, using property list_name.count(element_name) to get the number of elements element_name in the list list_name.\n\n\n4",
+    "text": "3.2 \n\nSuppose we tossed the coin n_trials = 10 times. Generate a list called series that would contain outputs of all these trials, e.g.\n\n\n['t', 't', 't', 't', 'h', 't', 't', 't', 'h', 't']\n\n\n(your output will be probably different).\nAdvice: it may be more convenient to use list comprehension instead of loops, though it’s up to you. Recall that range(10) command generates 10 numbers from 0 to 9.\nCount the number of “heads” in series, using property list_name.count(element_name) to get the number of elements element_name in the list list_name.\n\n\n2",
     "crumbs": [
       "Labs - Problems",
       "Lab 2 - Problems"
@@ -114,7 +114,7 @@
     "href": "Lab2.html#section-9",
     "title": "Lab 2",
     "section": "3.3 ",
-    "text": "3.3 \n\nLoad library pyplot of module matplotlib as follows:\n\nimport matplotlib.pyplot as plt\n\nChange now n_trials to 1000. We expect to see around 500 heads in a series of trials, though if you run your code, you will probably get another number. Define n_series = 1000 and repeat running the previous code n_series times, i.e. the output should be a list of n_series numbers. Store the output in a variable heads.\nAgain, you may find more useful to use list comprehension.\nCreate the scatter plot of numbers of heads in all series using the commands plt.scatter(x, heads) and plt.show(), where x would be all numbers from 0 to n_series.\nYour output should be similar to:\n\n\n\n\n\n\n\n\n\nAs you can see all results indeed gather around 500. Note that you can find min(heads) and max(heads) to see how large is the spread of numbers, e.g. on the picture above it’s\n\n[min(heads),max(heads)]\n\n[456, 546]",
+    "text": "3.3 \n\nLoad library pyplot of module matplotlib as follows:\n\nimport matplotlib.pyplot as plt\n\nChange now n_trials to 1000. We expect to see around 500 heads in a series of trials, though if you run your code, you will probably get another number. Define n_series = 1000 and repeat running the previous code n_series times, i.e. the output should be a list of n_series numbers. Store the output in a variable heads.\nAgain, you may find more useful to use list comprehension.\nCreate the scatter plot of numbers of heads in all series using the commands plt.scatter(x, heads) and plt.show(), where x would be all numbers from 0 to n_series.\nYour output should be similar to:\n\n\n\n\n\n\n\n\n\nAs you can see all results indeed gather around 500. Note that you can find min(heads) and max(heads) to see how large is the spread of numbers, e.g. on the picture above it’s\n\n[min(heads),max(heads)]\n\n[456, 552]",
     "crumbs": [
       "Labs - Problems",
       "Lab 2 - Problems"
@@ -125,7 +125,7 @@
     "href": "Lab2.html#section-10",
     "title": "Lab 2",
     "section": "4.1 ",
-    "text": "4.1 \n\nConsider again that we toss the coin \\(1000\\) times and count the number of tails, but repeat this procedure \\(10^5\\) times. Calculate the average m of the obtained result.\n\n\n500.04368\n\n\nAs expected, the result is pretty close to \\(500\\) (your result may differ from this, of course).",
+    "text": "4.1 \n\nConsider again that we toss the coin \\(1000\\) times and count the number of tails, but repeat this procedure \\(10^5\\) times. Calculate the average m of the obtained result.\n\n\n499.96864\n\n\nAs expected, the result is pretty close to \\(500\\) (your result may differ from this, of course).",
     "crumbs": [
       "Labs - Problems",
       "Lab 2 - Problems"
@@ -136,7 +136,7 @@
     "href": "Lab2.html#section-11",
     "title": "Lab 2",
     "section": "4.2 ",
-    "text": "4.2 \n\nWe can also model unfair coins. The command\n\nn=10\nnp.random.choice([0,1], size=(5,n), p=[0.6, 0.4])\n\narray([[0, 0, 0, 0, 1, 1, 0, 1, 0, 0],\n       [0, 1, 0, 1, 0, 1, 0, 0, 1, 0],\n       [0, 0, 0, 1, 0, 0, 1, 0, 1, 0],\n       [1, 1, 0, 1, 1, 1, 1, 0, 0, 1],\n       [1, 0, 0, 1, 0, 1, 0, 1, 0, 1]])\n\n\ngenerates \\(5\\) series of \\(10\\) outputs each with the probability for head \\(0.6\\) and the probability for tail \\(0.4\\). Calculate again the average for \\(10^5\\) series of \\(1000\\) trials.\n\n\n400.0689\n\n\nThe result is pretty close to \\(400 = 0.4*1000\\). We discuss the theoretical justification for this on Week 3.",
+    "text": "4.2 \n\nWe can also model unfair coins. The command\n\nn=10\nnp.random.choice([0,1], size=(5,n), p=[0.6, 0.4])\n\narray([[1, 1, 1, 0, 1, 1, 1, 0, 0, 1],\n       [0, 0, 1, 0, 1, 0, 0, 0, 0, 0],\n       [0, 1, 0, 1, 1, 1, 0, 1, 1, 0],\n       [0, 0, 0, 0, 0, 1, 1, 1, 0, 1],\n       [0, 0, 1, 1, 1, 0, 0, 0, 0, 1]])\n\n\ngenerates \\(5\\) series of \\(10\\) outputs each with the probability for head \\(0.6\\) and the probability for tail \\(0.4\\). Calculate again the average for \\(10^5\\) series of \\(1000\\) trials.\n\n\n399.97632\n\n\nThe result is pretty close to \\(400 = 0.4*1000\\). We discuss the theoretical justification for this on Week 3.",
     "crumbs": [
       "Labs - Problems",
       "Lab 2 - Problems"
@@ -271,6 +271,149 @@
     "text": "1 Sign up to Anaconda (do it once)\n\nGo to https://anaconda.cloud\nSign up using your personal or University email address.\nAdvice: do not use your University password.\n\n\n\n2 Log in to Anaconda (do it for each lab)\n\nLogin to https://anaconda.cloud\nChoose “Notebooks” in the top menu:\n\n\n\nCreate a folder for all files related to this module:\n\n\nand name it “MA-M16”.\n\nOpen the created folder.\nPress blue button with “+”\n\n\nand choose any of anaconda-notebooks:\n\n\nRename the created file\n\n\ne.g. to “Lab1.ipynb”, “Lab2.ipynb” etc.\n\n\n\n\n Back to top",
     "crumbs": [
       "Introduction"
+    ]
+  },
+  {
+    "objectID": "Lab2-solutions.html",
+    "href": "Lab2-solutions.html",
+    "title": "Lab 2 - Solutions",
+    "section": "",
+    "text": "A fair coin is tossed 25 times. Store at the variable a the probability to get 25 heads. A fair six-sided dice is throwing 10 times. Store at the variable b the probability to get 10 equal even scores. Find the ratio a/b.\n\nSolution. The probability of a head is \\(0.5\\), and all tossings are independend, hence, the probability to get \\(n\\) heads in a row is\n\\[\n0.5^n.\n\\]\nNext, \\(m\\) equal even scores in \\(m\\) throwings of the dice may be in \\(3\\) cases:\n\\[\n(\\underbrace{2,\\ldots,2}_{m\\ \\mathrm{times}}),\n(\\underbrace{4,\\ldots,4}_{m\\ \\mathrm{times}}),\n(\\underbrace{4,\\ldots,4}_{m\\ \\mathrm{times}})\n\\] These cases are mutually exclusive, hence the probability that either of them happens is the sum of probabilities of each event. Each probability is equal to\n\\[\n\\Bigl(\\frac16\\Bigr)^{m},\n\\] hence, for b, we need to multiply the latter number (for \\(m=10\\)) by \\(3\\).\n\n\n\nCode\n#\na = 0.5 ** 25\nb = 3 * (1/6) ** 10 # Read about the order of operations in Python\na/b\n\n\n0.6006774902343753\n\n\n\n\n\n\n\nAn experiment consists of selecting a token from a bag and spinning a coin. The bag contains \\(345\\) red tokens and \\(678\\) blue tokens. A token is selected at random from the bag, its colour is noted and then the token is returned to the bag.\nWhen a red token is selected, a biased coin with probability \\(\\dfrac45\\) of landing heads is tossed.\nWhen a blue token is selected, a biased coin with probability \\(\\dfrac25\\) of landing heads is spun.\nFind the probability c of obtaining tail. Round the answer to 3 decimal digits.\n\nSolution. Let \\(R\\) and \\(B\\) be the events of selecting a red (respectively, blue) token. Then\n\\[\n\\mathbb{P}(R) = \\frac{345}{345+678},\\qquad\n\\mathbb{P}(B) = 1-\\mathbb{P}(R)= \\frac{678}{345+678}.\n\\]\nLet \\(T\\) be the event of obtaining a tail. We will use the total probability law:\n\\[\n\\mathbb{P}(T) = \\mathbb{P}(T\\mid R)\\cdot \\mathbb{P}(R)+\n\\mathbb{P}(T \\mid B)\\cdot \\mathbb{P}(B).\n\\]\nWe know also that \\(\\mathbb{P}(H\\mid R)=\\frac45\\), hence, \\(\\mathbb{P}(T\\mid R)=1-\\frac45=\\frac15\\). Similarly, \\(\\mathbb{P}(T\\mid B)=1-\\frac25=\\frac35\\).\n\n\n\nCode\np_red =  345/(345+678)\np_blue = 1 - p_red\nc = p_red * (1 - 4/5) + p_blue * (1 - 2/5)\nround(c, 3)\n\n\n0.465\n\n\n\n\n\n\n\nIn the conditions of the previous task, if the tail was obtained, what is the probability \\(d\\) of having selected a red token? Round the answer to 3 decimal digits.\n\nSolution. By Bayes’ formula,\n\\[\n\\mathbb{P}(R | T) = \\frac{\\mathbb{P}(R) \\cdot \\mathbb{P}(T | R)}{\\mathbb{P}(T)}\n\\]\n\n\n\nCode\nd = p_red * (1-4/5) / c\nround(d, 3)\n\n\n0.145",
+    "crumbs": [
+      "Labs - Solutions",
+      "Lab 2 - Solutions"
+    ]
+  },
+  {
+    "objectID": "Lab2-solutions.html#section",
+    "href": "Lab2-solutions.html#section",
+    "title": "Lab 2 - Solutions",
+    "section": "",
+    "text": "A fair coin is tossed 25 times. Store at the variable a the probability to get 25 heads. A fair six-sided dice is throwing 10 times. Store at the variable b the probability to get 10 equal even scores. Find the ratio a/b.\n\nSolution. The probability of a head is \\(0.5\\), and all tossings are independend, hence, the probability to get \\(n\\) heads in a row is\n\\[\n0.5^n.\n\\]\nNext, \\(m\\) equal even scores in \\(m\\) throwings of the dice may be in \\(3\\) cases:\n\\[\n(\\underbrace{2,\\ldots,2}_{m\\ \\mathrm{times}}),\n(\\underbrace{4,\\ldots,4}_{m\\ \\mathrm{times}}),\n(\\underbrace{4,\\ldots,4}_{m\\ \\mathrm{times}})\n\\] These cases are mutually exclusive, hence the probability that either of them happens is the sum of probabilities of each event. Each probability is equal to\n\\[\n\\Bigl(\\frac16\\Bigr)^{m},\n\\] hence, for b, we need to multiply the latter number (for \\(m=10\\)) by \\(3\\).\n\n\n\nCode\n#\na = 0.5 ** 25\nb = 3 * (1/6) ** 10 # Read about the order of operations in Python\na/b\n\n\n0.6006774902343753",
+    "crumbs": [
+      "Labs - Solutions",
+      "Lab 2 - Solutions"
+    ]
+  },
+  {
+    "objectID": "Lab2-solutions.html#section-1",
+    "href": "Lab2-solutions.html#section-1",
+    "title": "Lab 2 - Solutions",
+    "section": "",
+    "text": "An experiment consists of selecting a token from a bag and spinning a coin. The bag contains \\(345\\) red tokens and \\(678\\) blue tokens. A token is selected at random from the bag, its colour is noted and then the token is returned to the bag.\nWhen a red token is selected, a biased coin with probability \\(\\dfrac45\\) of landing heads is tossed.\nWhen a blue token is selected, a biased coin with probability \\(\\dfrac25\\) of landing heads is spun.\nFind the probability c of obtaining tail. Round the answer to 3 decimal digits.\n\nSolution. Let \\(R\\) and \\(B\\) be the events of selecting a red (respectively, blue) token. Then\n\\[\n\\mathbb{P}(R) = \\frac{345}{345+678},\\qquad\n\\mathbb{P}(B) = 1-\\mathbb{P}(R)= \\frac{678}{345+678}.\n\\]\nLet \\(T\\) be the event of obtaining a tail. We will use the total probability law:\n\\[\n\\mathbb{P}(T) = \\mathbb{P}(T\\mid R)\\cdot \\mathbb{P}(R)+\n\\mathbb{P}(T \\mid B)\\cdot \\mathbb{P}(B).\n\\]\nWe know also that \\(\\mathbb{P}(H\\mid R)=\\frac45\\), hence, \\(\\mathbb{P}(T\\mid R)=1-\\frac45=\\frac15\\). Similarly, \\(\\mathbb{P}(T\\mid B)=1-\\frac25=\\frac35\\).\n\n\n\nCode\np_red =  345/(345+678)\np_blue = 1 - p_red\nc = p_red * (1 - 4/5) + p_blue * (1 - 2/5)\nround(c, 3)\n\n\n0.465",
+    "crumbs": [
+      "Labs - Solutions",
+      "Lab 2 - Solutions"
+    ]
+  },
+  {
+    "objectID": "Lab2-solutions.html#section-2",
+    "href": "Lab2-solutions.html#section-2",
+    "title": "Lab 2 - Solutions",
+    "section": "",
+    "text": "In the conditions of the previous task, if the tail was obtained, what is the probability \\(d\\) of having selected a red token? Round the answer to 3 decimal digits.\n\nSolution. By Bayes’ formula,\n\\[\n\\mathbb{P}(R | T) = \\frac{\\mathbb{P}(R) \\cdot \\mathbb{P}(T | R)}{\\mathbb{P}(T)}\n\\]\n\n\n\nCode\nd = p_red * (1-4/5) / c\nround(d, 3)\n\n\n0.145",
+    "crumbs": [
+      "Labs - Solutions",
+      "Lab 2 - Solutions"
+    ]
+  },
+  {
+    "objectID": "Lab2-solutions.html#section-3",
+    "href": "Lab2-solutions.html#section-3",
+    "title": "Lab 2 - Solutions",
+    "section": "2.1 ",
+    "text": "2.1 \n\nIn a school sport club, there are \\(20\\) children who like rugby more than football, and \\(15\\) chidlren who like football more than rugby. (Noone likes them equally.) The club wants to form a committee of \\(6\\) people: \\(3\\) football funs and \\(3\\) rugby funs. How many ways does there exist to form the committee? Store the answer in w.\n\nRemark. Note that since the choice of football funs does not depend on the choice of rugby funs, we need just to multiply the number of ways to choose fotball funs and the number of ways to choose rugby funs.\n\n\nSolution. Therefore,\n\\[\nw = \\binom{20}{3}\\cdot\\binom{15}{3}\n\\]\n\n\n\nCode\nw = comb(20,3, exact=True) * comb(15,3, exact=True)\nw\n\n\n518700",
+    "crumbs": [
+      "Labs - Solutions",
+      "Lab 2 - Solutions"
+    ]
+  },
+  {
+    "objectID": "Lab2-solutions.html#section-4",
+    "href": "Lab2-solutions.html#section-4",
+    "title": "Lab 2 - Solutions",
+    "section": "2.2 ",
+    "text": "2.2 \n\nLet now the committee (of 6 children) is chosen without any restrictions on the preferences of its members. Find the number of ways to form the committee. Store the answer in r.\n\nSolution. We choose \\(6\\) children from \\(20+15=35\\), it can be done in \\(\\binom{35}{6}\\) ways.\n\n\n\nCode\n# We choose 6 children from 35\nr = comb(35,6, exact=True)\nr\n\n\n1623160",
+    "crumbs": [
+      "Labs - Solutions",
+      "Lab 2 - Solutions"
+    ]
+  },
+  {
+    "objectID": "Lab2-solutions.html#section-5",
+    "href": "Lab2-solutions.html#section-5",
+    "title": "Lab 2 - Solutions",
+    "section": "2.3 ",
+    "text": "2.3 \n\nFinally, find the probability p that a randomly choosen committee consisting of 6 children has equal numbers of football and rugby funs. Round to \\(4\\) decimal digits.\n\n\nCode\np = round(w/r,4)\np\n\n\n0.3196",
+    "crumbs": [
+      "Labs - Solutions",
+      "Lab 2 - Solutions"
+    ]
+  },
+  {
+    "objectID": "Lab2-solutions.html#section-6",
+    "href": "Lab2-solutions.html#section-6",
+    "title": "Lab 2 - Solutions",
+    "section": "2.4 ",
+    "text": "2.4 \n\nIf \\(10\\) balls are randomly drawn from a bag containing \\(17\\) blue and \\(19\\) yellow balls, what is the probability q that \\(4\\) of the balls are blue and the others are yellow? Round to \\(3\\) decimal digits.\nNote that despite the balls of the same colour are indistinguishable (in contrast to children of the same sport preference in the previous tasks), we may always think that the balls e.g. numbered, to apply the same arguments as before.\n\n\nCode\nq = comb(17, 4) * comb(19, 10-4) / comb(17+19, 10)\nq\n\n\n0.25404208941472567\n\n\n\n\n\n\n\n\n\nRemember\n\n\n\n\nSpecial cases:\n\n\\[\n\\binom{n}{0}=\\binom{0}{0}=1\n\\]\n\nSimple cases:\n\n\\[\n\\binom{n}{1} = n, \\qquad \\binom{n}{2}=\\frac{n(n-1)}{2}\n\\]\n\nOverall,\n\n\\[\n\\binom{n}{k} = \\frac{n\\cdot(n-1)\\cdot(n-2)\\cdot\\ldots\\cdot(n-k+1)}{1\\cdot2\\cdot3\\cdot\\ldots\\cdot k},\n\\]\nwhere numerator has \\(k\\) factors. E.g.\n\\[\n\\binom{37}{4}=\\frac{37\\cdot 36\\cdot 35\\cdot 34}{1\\cdot 2\\cdot 3\\cdot 4}.\n\\]",
+    "crumbs": [
+      "Labs - Solutions",
+      "Lab 2 - Solutions"
+    ]
+  },
+  {
+    "objectID": "Lab2-solutions.html#section-7",
+    "href": "Lab2-solutions.html#section-7",
+    "title": "Lab 2 - Solutions",
+    "section": "3.1 ",
+    "text": "3.1 \n\nChoose a random element from the list coin. The output will be one of two letters h or t, e.g.:\n\n\nCode\nrandom.choice(coin)\n\n\n'h'\n\n\nNote that if you run the same code again and again you may get each time another output.\nCongratulations: you made your first probability model.",
+    "crumbs": [
+      "Labs - Solutions",
+      "Lab 2 - Solutions"
+    ]
+  },
+  {
+    "objectID": "Lab2-solutions.html#section-8",
+    "href": "Lab2-solutions.html#section-8",
+    "title": "Lab 2 - Solutions",
+    "section": "3.2 ",
+    "text": "3.2 \n\nSuppose we tossed the coin n_trials = 10 times. Generate a list called series that would contain outputs of all these trials, e.g.\n\n\nCode\nn_trials = 10\nseries = [random.choice(coin) for _ in range(n_trials)]\nseries\n\n\n['t', 'h', 't', 'h', 't', 'h', 'h', 't', 't', 't']\n\n\n(your output will be probably different).\nAdvice: it may be more convenient to use list comprehension instead of loops, though it’s up to you. Recall that range(10) command generates 10 numbers from 0 to 9.\nCount the number of “heads” in series, using property list_name.count(element_name) to get the number of elements element_name in the list list_name.\n\n\nCode\nseries.count('h')\n\n\n4",
+    "crumbs": [
+      "Labs - Solutions",
+      "Lab 2 - Solutions"
+    ]
+  },
+  {
+    "objectID": "Lab2-solutions.html#section-9",
+    "href": "Lab2-solutions.html#section-9",
+    "title": "Lab 2 - Solutions",
+    "section": "3.3 ",
+    "text": "3.3 \n\nLoad library pyplot of module matplotlib as follows:\n\nimport matplotlib.pyplot as plt\n\nChange now n_trials to 1000. We expect to see around 500 heads in a series of trials, though if you run your code, you will probably get another number. Define n_series = 1000 and repeat running the previous code n_series times, i.e. the output should be a list of n_series numbers. Store the output in a variable heads.\nAgain, you may find more useful to use list comprehension.\nCreate the scatter plot of numbers of heads in all series using the commands plt.scatter(x, heads) and plt.show(), where x would be all numbers from 0 to n_series.\nYour output should be similar to:\n\n\nCode\n#The first line of the code is to see the output in Jupyter notebook\n%matplotlib inline\nn_trials = 1000\nn_series = 1000\nheads = [[random.choice(coin) for _ in range(n_trials)].count('h') for _ in range(n_series)]\nx = range(n_series)\nplt.scatter(x, heads)\nplt.show()\n\n\n\n\n\n\n\n\n\nAs you can see all results indeed gather around 500. Note that you can find min(heads) and max(heads) to see how large is the spread of numbers, e.g. on the picture above it’s\n\n[min(heads),max(heads)]\n\n[452, 561]",
+    "crumbs": [
+      "Labs - Solutions",
+      "Lab 2 - Solutions"
+    ]
+  },
+  {
+    "objectID": "Lab2-solutions.html#section-10",
+    "href": "Lab2-solutions.html#section-10",
+    "title": "Lab 2 - Solutions",
+    "section": "4.1 ",
+    "text": "4.1 \n\nConsider again that we toss the coin \\(1000\\) times and count the number of tails, but repeat this procedure \\(10^5\\) times. Calculate the average m of the obtained result.\n\n\nCode\nn = 1000\nb = np.random.randint(2, size=(10**5,n))\nb.sum(axis=1).mean()\n\n\n500.01976\n\n\nAs expected, the result is pretty close to \\(500\\) (your result may differ from this, of course).",
+    "crumbs": [
+      "Labs - Solutions",
+      "Lab 2 - Solutions"
+    ]
+  },
+  {
+    "objectID": "Lab2-solutions.html#section-11",
+    "href": "Lab2-solutions.html#section-11",
+    "title": "Lab 2 - Solutions",
+    "section": "4.2 ",
+    "text": "4.2 \n\nWe can also model unfair coins. The command\n\nn=10\nnp.random.choice([0,1], size=(5,n), p=[0.6, 0.4])\n\narray([[1, 0, 1, 0, 0, 1, 1, 0, 0, 1],\n       [1, 0, 1, 1, 0, 0, 1, 0, 0, 1],\n       [1, 0, 0, 1, 1, 1, 0, 0, 1, 1],\n       [1, 0, 1, 0, 0, 0, 0, 0, 1, 0],\n       [0, 1, 1, 1, 0, 0, 0, 1, 1, 1]])\n\n\ngenerates \\(5\\) series of \\(10\\) outputs each with the probability for head \\(0.6\\) and the probability for tail \\(0.4\\). Calculate again the average for \\(10^5\\) series of \\(1000\\) trials.\n\n\nCode\nn = 1000\nb = np.random.choice([0,1], size=(10**5,n), p=[0.6, 0.4])\nb.sum(axis=1).mean()\n\n\n400.00039\n\n\nThe result is pretty close to \\(400 = 0.4*1000\\). We discuss the theoretical justification for this on Week 3.",
+    "crumbs": [
+      "Labs - Solutions",
+      "Lab 2 - Solutions"
     ]
   },
   {
