@@ -103,7 +103,7 @@
     "href": "Lab2.html#section-8",
     "title": "Lab 2",
     "section": "3.2 ",
-    "text": "3.2 \n\nSuppose we tossed the coin n_trials = 10 times. Generate a list called series that would contain outputs of all these trials, e.g.\n\n\n['t', 't', 't', 't', 'h', 't', 't', 't', 'h', 't']\n\n\n(your output will be probably different).\nAdvice: it may be more convenient to use list comprehension instead of loops, though it’s up to you. Recall that range(10) command generates 10 numbers from 0 to 9.\nCount the number of “heads” in series, using property list_name.count(element_name) to get the number of elements element_name in the list list_name.\n\n\n2",
+    "text": "3.2 \n\nSuppose we tossed the coin n_trials = 10 times. Generate a list called series that would contain outputs of all these trials, e.g.\n\n\n['t', 't', 't', 'h', 't', 'h', 't', 't', 'h', 'h']\n\n\n(your output will be probably different).\nAdvice: it may be more convenient to use list comprehension instead of loops, though it’s up to you. Recall that range(10) command generates 10 numbers from 0 to 9.\nCount the number of “heads” in series, using property list_name.count(element_name) to get the number of elements element_name in the list list_name.\n\n\n4",
     "crumbs": [
       "Labs - Problems",
       "Lab 2 - Problems"
@@ -114,7 +114,7 @@
     "href": "Lab2.html#section-9",
     "title": "Lab 2",
     "section": "3.3 ",
-    "text": "3.3 \n\nLoad library pyplot of module matplotlib as follows:\n\nimport matplotlib.pyplot as plt\n\nChange now n_trials to 1000. We expect to see around 500 heads in a series of trials, though if you run your code, you will probably get another number. Define n_series = 1000 and repeat running the previous code n_series times, i.e. the output should be a list of n_series numbers. Store the output in a variable heads.\nAgain, you may find more useful to use list comprehension.\nCreate the scatter plot of numbers of heads in all series using the commands plt.scatter(x, heads) and plt.show(), where x would be all numbers from 0 to n_series.\nYour output should be similar to:\n\n\n\n\n\n\n\n\n\nAs you can see all results indeed gather around 500. Note that you can find min(heads) and max(heads) to see how large is the spread of numbers, e.g. on the picture above it’s\n\n[min(heads),max(heads)]\n\n[456, 552]",
+    "text": "3.3 \n\nLoad library pyplot of module matplotlib as follows:\n\nimport matplotlib.pyplot as plt\n\nChange now n_trials to 1000. We expect to see around 500 heads in a series of trials, though if you run your code, you will probably get another number. Define n_series = 1000 and repeat running the previous code n_series times, i.e. the output should be a list of n_series numbers. Store the output in a variable heads.\nAgain, you may find more useful to use list comprehension.\nCreate the scatter plot of numbers of heads in all series using the commands plt.scatter(x, heads) and plt.show(), where x would be all numbers from 0 to n_series.\nYour output should be similar to:\n\n\n\n\n\n\n\n\n\nAs you can see all results indeed gather around 500. Note that you can find min(heads) and max(heads) to see how large is the spread of numbers, e.g. on the picture above it’s\n\n[min(heads),max(heads)]\n\n[456, 546]",
     "crumbs": [
       "Labs - Problems",
       "Lab 2 - Problems"
@@ -125,7 +125,7 @@
     "href": "Lab2.html#section-10",
     "title": "Lab 2",
     "section": "4.1 ",
-    "text": "4.1 \n\nConsider again that we toss the coin \\(1000\\) times and count the number of tails, but repeat this procedure \\(10^5\\) times. Calculate the average m of the obtained result.\n\n\n499.96864\n\n\nAs expected, the result is pretty close to \\(500\\) (your result may differ from this, of course).",
+    "text": "4.1 \n\nConsider again that we toss the coin \\(1000\\) times and count the number of tails, but repeat this procedure \\(10^5\\) times. Calculate the average m of the obtained result.\n\n\n500.04368\n\n\nAs expected, the result is pretty close to \\(500\\) (your result may differ from this, of course).",
     "crumbs": [
       "Labs - Problems",
       "Lab 2 - Problems"
@@ -136,7 +136,7 @@
     "href": "Lab2.html#section-11",
     "title": "Lab 2",
     "section": "4.2 ",
-    "text": "4.2 \n\nWe can also model unfair coins. The command\n\nn=10\nnp.random.choice([0,1], size=(5,n), p=[0.6, 0.4])\n\narray([[1, 1, 1, 0, 1, 1, 1, 0, 0, 1],\n       [0, 0, 1, 0, 1, 0, 0, 0, 0, 0],\n       [0, 1, 0, 1, 1, 1, 0, 1, 1, 0],\n       [0, 0, 0, 0, 0, 1, 1, 1, 0, 1],\n       [0, 0, 1, 1, 1, 0, 0, 0, 0, 1]])\n\n\ngenerates \\(5\\) series of \\(10\\) outputs each with the probability for head \\(0.6\\) and the probability for tail \\(0.4\\). Calculate again the average for \\(10^5\\) series of \\(1000\\) trials.\n\n\n399.97632\n\n\nThe result is pretty close to \\(400 = 0.4*1000\\). We discuss the theoretical justification for this on Week 3.",
+    "text": "4.2 \n\nWe can also model unfair coins. The command\n\nn=10\nnp.random.choice([0,1], size=(5,n), p=[0.6, 0.4])\n\narray([[0, 0, 0, 0, 1, 1, 0, 1, 0, 0],\n       [0, 1, 0, 1, 0, 1, 0, 0, 1, 0],\n       [0, 0, 0, 1, 0, 0, 1, 0, 1, 0],\n       [1, 1, 0, 1, 1, 1, 1, 0, 0, 1],\n       [1, 0, 0, 1, 0, 1, 0, 1, 0, 1]])\n\n\ngenerates \\(5\\) series of \\(10\\) outputs each with the probability for head \\(0.6\\) and the probability for tail \\(0.4\\). Calculate again the average for \\(10^5\\) series of \\(1000\\) trials.\n\n\n400.0689\n\n\nThe result is pretty close to \\(400 = 0.4*1000\\). We discuss the theoretical justification for this on Week 3.",
     "crumbs": [
       "Labs - Problems",
       "Lab 2 - Problems"
@@ -264,6 +264,105 @@
     ]
   },
   {
+    "objectID": "Lab3.html",
+    "href": "Lab3.html",
+    "title": "Lab 3",
+    "section": "",
+    "text": "Module scipy.stats of the famous library scipy provides various tools to work with probability and statistics in Python. Today, we consider several discrete distributions; to work with them will use the same structure of commands. In particular, any distribution will have the following methods:\n\nrvs - to generate (several) values of a random variable \\(X\\) (see below in this Lab)\npmf - to calculate probability mass function at any \\(k\\in\\mathbb{R}\\) \\[\np_X(k)=\\mathbb{P}(X=k)\n\\]\ncdf - to calculate the cumulative distribuion function \\[\nF_X(x)=\\sum_{k\\leq x} p_X(k)=\\mathbb{P}(X\\leq x)\n\\] recall that \\[\n\\mathbb{P}(a&lt;X\\leq b) = F_X(b)-F_X(a)\n\\]\nmean - to calculate the mathematical expectation (mean) \\(\\mathbb{E}(X)\\)\nvar - to calculate the varaince \\(\\mathrm{Var}(X)\\)\nstd - to calculate the standard deviation \\(\\sigma(X)=\\sqrt{\\mathrm{Var}(X)}\\)",
+    "crumbs": [
+      "Labs - Problems",
+      "Lab 3 - Problems"
+    ]
+  },
+  {
+    "objectID": "Lab3.html#section",
+    "href": "Lab3.html#section",
+    "title": "Lab 3",
+    "section": "2.1 ",
+    "text": "2.1 \n\nLet \\(X\\sim Bin(27, 0.45)\\).\n\nCalculate \\(\\mathbb{P}(X\\leq 20)\\). Check the answer:\n\n\n\n0.9994575733214396\n\n\n\nCalculate \\(\\mathbb{P}(X &lt; 10)\\). Check the answer:\n\n\n\n0.15256903022954094\n\n\n\nCalculate \\(\\mathbb{P}(7&lt;X\\leq 13)\\). Check the answer:\n\n\n\n0.666671672666459\n\n\n\nCalculate \\(\\mathbb{P}(7\\leq X\\leq 13)\\). Check the answer:\n\n\n\n0.6879613472859423",
+    "crumbs": [
+      "Labs - Problems",
+      "Lab 3 - Problems"
+    ]
+  },
+  {
+    "objectID": "Lab3.html#section-1",
+    "href": "Lab3.html#section-1",
+    "title": "Lab 3",
+    "section": "2.2 ",
+    "text": "2.2 \n\nA company manufactures light bulbs, and \\(95\\)% of them are of good quality, while the rest are defective. If a customer buys \\(50\\) light bulbs, what is the probability that:\n\nExactly \\(5\\) of them are defective? Check the answer:\n\n\n\n0.06584063715436628\n\n\n\nAt most \\(5\\) of them are defective? Check the answer:\n\n\n\n0.9622238270102227\n\n\n\nAt least \\(5\\) of them are defective? Check the answer:\n\n\n\n0.10361681014414348\n\n\n\nFind the expected value of the number of defective bulbs and the standard deviation of this quantity. Check the answer:\n\n\n\n[2.5, 1.541103500742244]",
+    "crumbs": [
+      "Labs - Problems",
+      "Lab 3 - Problems"
+    ]
+  },
+  {
+    "objectID": "Lab3.html#section-2",
+    "href": "Lab3.html#section-2",
+    "title": "Lab 3",
+    "section": "3.1 ",
+    "text": "3.1 \n\nLet \\(X\\sim Geom(0.4)\\). Calculate \\(\\mathbb{P}(7\\leq X &lt;10)\\). Check the answer.\n\n\n0.03657830400000006",
+    "crumbs": [
+      "Labs - Problems",
+      "Lab 3 - Problems"
+    ]
+  },
+  {
+    "objectID": "Lab3.html#section-3",
+    "href": "Lab3.html#section-3",
+    "title": "Lab 3",
+    "section": "3.2 ",
+    "text": "3.2 \n\nA lazy student has to take a quiz, where each question may have as an answer an integer number from \\(1\\) to \\(100\\) (different questions may have equal answers). Instead of preparation, the student is going to guess the answers. The quiz contains \\(20\\) questions. As soon as the student gives a correct answer, the quiz stops, and it is considered as a passed one. What is the probability that the student will pass the quiz?\nHint: the quiz may stop after either of \\(1,2,3,\\ldots,20\\) questions.\nCheck the answer:\n\n\n0.18209306240276918",
+    "crumbs": [
+      "Labs - Problems",
+      "Lab 3 - Problems"
+    ]
+  },
+  {
+    "objectID": "Lab3.html#section-4",
+    "href": "Lab3.html#section-4",
+    "title": "Lab 3",
+    "section": "4.1 ",
+    "text": "4.1 \n\nLet \\(X\\sim NB(5, 0.3)\\). Find \\(\\mathbb{P}(X&gt;10)\\). Check the answer.\n\n\n0.5154910592268431",
+    "crumbs": [
+      "Labs - Problems",
+      "Lab 3 - Problems"
+    ]
+  },
+  {
+    "objectID": "Lab3.html#section-5",
+    "href": "Lab3.html#section-5",
+    "title": "Lab 3",
+    "section": "4.2 ",
+    "text": "4.2 \n\nA lazy student has to take a quiz, where each question may have as an answer an integer number from \\(1\\) to \\(100\\) (different questions may have equal answers). Instead of preparation, the student is going to guess the answers. The quiz contains \\(20\\) questions. The quiz stops as soon as the student answers correctly \\(3\\) questions. What is th probability to pass the test for this student?\nHint: think on how many wrong answers could be made by the student to stil pass the test.\nCheck the answer.\n\n\n0.0010035761681001162",
+    "crumbs": [
+      "Labs - Problems",
+      "Lab 3 - Problems"
+    ]
+  },
+  {
+    "objectID": "Lab3.html#section-7",
+    "href": "Lab3.html#section-7",
+    "title": "Lab 3",
+    "section": "5.1 ",
+    "text": "5.1 \n\nIn an insurance company, customers’ claims are raised at an average rate of \\(5\\) claims per working day. Calculate the probability that\n\nExactly \\(30\\) claims will be raised in one working week (Monday – Friday). Check the answer.\n\n\n\n0.04541278513011904\n\n\n\nAt least \\(8\\) claims will be raised in the next \\(2\\) working days. Check the answer.\n\n\n\n0.7797793533983011",
+    "crumbs": [
+      "Labs - Problems",
+      "Lab 3 - Problems"
+    ]
+  },
+  {
+    "objectID": "Lab3.html#section-8",
+    "href": "Lab3.html#section-8",
+    "title": "Lab 3",
+    "section": "6.1 ",
+    "text": "6.1 \n\nLet \\(X\\sim Po(3)\\) be a Poisson random variable with the parameter \\(\\lambda=3\\). Generate \\(100\\) random values of \\(X\\) fixing random_state = 111, and assign the resulting Numpy array to a variable f. Calculate the mean and the (population) variance of f. Check your answer. Don’t forget to load numpy first.\n\n\n[2.9, 2.87]\n\n\nWe know that the theoretical mean (expected value) \\(\\mathbb{E}(X)\\) and variance \\(\\mathrm{Var}(X)\\) for a Poisson random variable are equal to \\(\\lambda\\):\n\\[\n\\mathbb{E}(X)=\\mathrm{Var}(X)=\\lambda.\n\\]\nClearly, \\(2.9\\neq 3\\neq 2.87\\). To make the statistics more “matching” the probability, we need to increase the size of the data: let’s generate \\(10^6\\) random variables (keeping random_state = 111). Check the answers.\n\n\n[2.998107, 2.9899274165509997]",
+    "crumbs": [
+      "Labs - Problems",
+      "Lab 3 - Problems"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Introduction",
@@ -366,7 +465,7 @@
     "href": "Lab2-solutions.html#section-7",
     "title": "Lab 2 - Solutions",
     "section": "3.1 ",
-    "text": "3.1 \n\nChoose a random element from the list coin. The output will be one of two letters h or t, e.g.:\n\n\nCode\nrandom.choice(coin)\n\n\n'h'\n\n\nNote that if you run the same code again and again you may get each time another output.\nCongratulations: you made your first probability model.",
+    "text": "3.1 \n\nChoose a random element from the list coin. The output will be one of two letters h or t, e.g.:\n\n\nCode\nrandom.choice(coin)\n\n\n't'\n\n\nNote that if you run the same code again and again you may get each time another output.\nCongratulations: you made your first probability model.",
     "crumbs": [
       "Labs - Solutions",
       "Lab 2 - Solutions"
@@ -377,7 +476,7 @@
     "href": "Lab2-solutions.html#section-8",
     "title": "Lab 2 - Solutions",
     "section": "3.2 ",
-    "text": "3.2 \n\nSuppose we tossed the coin n_trials = 10 times. Generate a list called series that would contain outputs of all these trials, e.g.\n\n\nCode\nn_trials = 10\nseries = [random.choice(coin) for _ in range(n_trials)]\nseries\n\n\n['t', 'h', 't', 'h', 't', 'h', 'h', 't', 't', 't']\n\n\n(your output will be probably different).\nAdvice: it may be more convenient to use list comprehension instead of loops, though it’s up to you. Recall that range(10) command generates 10 numbers from 0 to 9.\nCount the number of “heads” in series, using property list_name.count(element_name) to get the number of elements element_name in the list list_name.\n\n\nCode\nseries.count('h')\n\n\n4",
+    "text": "3.2 \n\nSuppose we tossed the coin n_trials = 10 times. Generate a list called series that would contain outputs of all these trials, e.g.\n\n\nCode\nn_trials = 10\nseries = [random.choice(coin) for _ in range(n_trials)]\nseries\n\n\n['h', 'h', 't', 't', 't', 't', 't', 'h', 't', 'h']\n\n\n(your output will be probably different).\nAdvice: it may be more convenient to use list comprehension instead of loops, though it’s up to you. Recall that range(10) command generates 10 numbers from 0 to 9.\nCount the number of “heads” in series, using property list_name.count(element_name) to get the number of elements element_name in the list list_name.\n\n\nCode\nseries.count('h')\n\n\n4",
     "crumbs": [
       "Labs - Solutions",
       "Lab 2 - Solutions"
@@ -388,7 +487,7 @@
     "href": "Lab2-solutions.html#section-9",
     "title": "Lab 2 - Solutions",
     "section": "3.3 ",
-    "text": "3.3 \n\nLoad library pyplot of module matplotlib as follows:\n\nimport matplotlib.pyplot as plt\n\nChange now n_trials to 1000. We expect to see around 500 heads in a series of trials, though if you run your code, you will probably get another number. Define n_series = 1000 and repeat running the previous code n_series times, i.e. the output should be a list of n_series numbers. Store the output in a variable heads.\nAgain, you may find more useful to use list comprehension.\nCreate the scatter plot of numbers of heads in all series using the commands plt.scatter(x, heads) and plt.show(), where x would be all numbers from 0 to n_series.\nYour output should be similar to:\n\n\nCode\n#The first line of the code is to see the output in Jupyter notebook\n%matplotlib inline\nn_trials = 1000\nn_series = 1000\nheads = [[random.choice(coin) for _ in range(n_trials)].count('h') for _ in range(n_series)]\nx = range(n_series)\nplt.scatter(x, heads)\nplt.show()\n\n\n\n\n\n\n\n\n\nAs you can see all results indeed gather around 500. Note that you can find min(heads) and max(heads) to see how large is the spread of numbers, e.g. on the picture above it’s\n\n[min(heads),max(heads)]\n\n[452, 561]",
+    "text": "3.3 \n\nLoad library pyplot of module matplotlib as follows:\n\nimport matplotlib.pyplot as plt\n\nChange now n_trials to 1000. We expect to see around 500 heads in a series of trials, though if you run your code, you will probably get another number. Define n_series = 1000 and repeat running the previous code n_series times, i.e. the output should be a list of n_series numbers. Store the output in a variable heads.\nAgain, you may find more useful to use list comprehension.\nCreate the scatter plot of numbers of heads in all series using the commands plt.scatter(x, heads) and plt.show(), where x would be all numbers from 0 to n_series.\nYour output should be similar to:\n\n\nCode\n#The first line of the code is to see the output in Jupyter notebook\n%matplotlib inline\nn_trials = 1000\nn_series = 1000\nheads = [[random.choice(coin) for _ in range(n_trials)].count('h') for _ in range(n_series)]\nx = range(n_series)\nplt.scatter(x, heads)\nplt.show()\n\n\n\n\n\n\n\n\n\nAs you can see all results indeed gather around 500. Note that you can find min(heads) and max(heads) to see how large is the spread of numbers, e.g. on the picture above it’s\n\n[min(heads),max(heads)]\n\n[452, 563]",
     "crumbs": [
       "Labs - Solutions",
       "Lab 2 - Solutions"
@@ -399,7 +498,7 @@
     "href": "Lab2-solutions.html#section-10",
     "title": "Lab 2 - Solutions",
     "section": "4.1 ",
-    "text": "4.1 \n\nConsider again that we toss the coin \\(1000\\) times and count the number of tails, but repeat this procedure \\(10^5\\) times. Calculate the average m of the obtained result.\n\n\nCode\nn = 1000\nb = np.random.randint(2, size=(10**5,n))\nb.sum(axis=1).mean()\n\n\n500.01976\n\n\nAs expected, the result is pretty close to \\(500\\) (your result may differ from this, of course).",
+    "text": "4.1 \n\nConsider again that we toss the coin \\(1000\\) times and count the number of tails, but repeat this procedure \\(10^5\\) times. Calculate the average m of the obtained result.\n\n\nCode\nn = 1000\nb = np.random.randint(2, size=(10**5,n))\nb.sum(axis=1).mean()\n\n\n499.98914\n\n\nAs expected, the result is pretty close to \\(500\\) (your result may differ from this, of course).",
     "crumbs": [
       "Labs - Solutions",
       "Lab 2 - Solutions"
@@ -410,7 +509,7 @@
     "href": "Lab2-solutions.html#section-11",
     "title": "Lab 2 - Solutions",
     "section": "4.2 ",
-    "text": "4.2 \n\nWe can also model unfair coins. The command\n\nn=10\nnp.random.choice([0,1], size=(5,n), p=[0.6, 0.4])\n\narray([[1, 0, 1, 0, 0, 1, 1, 0, 0, 1],\n       [1, 0, 1, 1, 0, 0, 1, 0, 0, 1],\n       [1, 0, 0, 1, 1, 1, 0, 0, 1, 1],\n       [1, 0, 1, 0, 0, 0, 0, 0, 1, 0],\n       [0, 1, 1, 1, 0, 0, 0, 1, 1, 1]])\n\n\ngenerates \\(5\\) series of \\(10\\) outputs each with the probability for head \\(0.6\\) and the probability for tail \\(0.4\\). Calculate again the average for \\(10^5\\) series of \\(1000\\) trials.\n\n\nCode\nn = 1000\nb = np.random.choice([0,1], size=(10**5,n), p=[0.6, 0.4])\nb.sum(axis=1).mean()\n\n\n400.00039\n\n\nThe result is pretty close to \\(400 = 0.4*1000\\). We discuss the theoretical justification for this on Week 3.",
+    "text": "4.2 \n\nWe can also model unfair coins. The command\n\nn=10\nnp.random.choice([0,1], size=(5,n), p=[0.6, 0.4])\n\narray([[1, 1, 0, 0, 1, 0, 0, 0, 1, 0],\n       [0, 0, 0, 1, 0, 0, 1, 0, 0, 1],\n       [0, 0, 1, 1, 0, 1, 1, 1, 1, 1],\n       [0, 1, 0, 0, 1, 0, 1, 0, 1, 1],\n       [1, 1, 0, 0, 0, 0, 0, 1, 0, 1]])\n\n\ngenerates \\(5\\) series of \\(10\\) outputs each with the probability for head \\(0.6\\) and the probability for tail \\(0.4\\). Calculate again the average for \\(10^5\\) series of \\(1000\\) trials.\n\n\nCode\nn = 1000\nb = np.random.choice([0,1], size=(10**5,n), p=[0.6, 0.4])\nb.sum(axis=1).mean()\n\n\n400.00075\n\n\nThe result is pretty close to \\(400 = 0.4*1000\\). We discuss the theoretical justification for this on Week 3.",
     "crumbs": [
       "Labs - Solutions",
       "Lab 2 - Solutions"
