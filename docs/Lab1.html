@@ -208,6 +208,12 @@ window.Quarto = {
  <span class="menu-text">Lab 3 - Problems</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Lab4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 4 - Problems</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
@@ -320,7 +326,7 @@ window.Quarto = {
 </ul>
 <p>In this lab we consider the first two of them.</p>
 <p>There are several ways to calculate mean, mode, median, variance and other descriptive characteristics in Python. We will use <code>numpy</code> library for this, so run at the beginning of your Jupyter notebook the following command</p>
-<div id="801bb700" class="cell" data-execution_count="2">
+<div id="8307398f" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="main-statistical-characteristics" class="level1" data-number="1">
@@ -328,27 +334,27 @@ window.Quarto = {
 <section id="manual-definition-of-the-data" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="manual-definition-of-the-data">Manual definition of the data</h3>
 <p>We can define data manually, e.g.&nbsp;we assign a list of values to a variable:</p>
-<div id="30ef2e87" class="cell" data-execution_count="3">
+<div id="e0b36a78" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This is a bit tedious precedure, and if you start to re-type this in your <a href="https://anaconda.cloud" class="uri">https://anaconda.cloud</a> Jupyter Notebook you may make a mistake. It may be better to copy the previous line of the code and paste into the notebook. To copy it, you may e.g.&nbsp;hover the mouse above the right end of the grey area with code and click the appeared icon:</p>
 <p><img src="images/AC-copy.png" class="img-fluid" style="width:60.0%"></p>
 <p>Despite some of operations below would work with lists, the lists are not very convenient for Maths, e.g.</p>
-<div id="8ff0bb41" class="cell" data-execution_count="4">
+<div id="17114e32" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">*</span> [<span class="dv">1</span>,<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>[1, 2, 1, 2]</code></pre>
 </div>
 </div>
 <p>whereas you would probably expect to get <code>[2,4]</code>. To work with lists as vectors, we convert them into Numpy arrays, e.g.</p>
-<div id="fba70dbc" class="cell" data-execution_count="5">
+<div id="616f75fa" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>np.array([<span class="dv">1</span>,<span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>array([1, 2])</code></pre>
 </div>
 </div>
 <p>then it will work as expected:</p>
-<div id="4690916d" class="cell" data-execution_count="6">
+<div id="ce119a3b" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">*</span> np.array([<span class="dv">1</span>,<span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>array([2, 4])</code></pre>
@@ -359,7 +365,7 @@ window.Quarto = {
 <h2 data-number="1.1" class="anchored" data-anchor-id="section"><span class="header-section-number">1.1</span> </h2>
 <div class="task">
 <p>Convert the list <code>a</code> defined above to a Numpy array, reassign the result again to the variable <code>a</code> to get the following output</p>
-<div id="7770ffbb" class="cell" data-execution_count="8">
+<div id="86e16523" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>array([2, 1, 3, 4, 2, 6, 4, 0, 1, 1, 3, 3, 4, 1, 1, 5, 5, 2, 1, 3])</code></pre>
@@ -373,7 +379,7 @@ window.Quarto = {
 \bar{a} = \frac{a_1+\ldots+a_{n}}{n},
 \]</span></p>
 <p>for <span class="math inline">\(n=20\)</span>, we run</p>
-<div id="5db248a5" class="cell" data-execution_count="9">
+<div id="47d58e19" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>np.mean(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>2.6</code></pre>
@@ -390,7 +396,7 @@ window.Quarto = {
 <h2 data-number="1.2" class="anchored" data-anchor-id="section-1"><span class="header-section-number">1.2</span> </h2>
 <div class="task">
 <p>Find the median of <code>a</code>. Check the answer.</p>
-<div id="4b82f00e" class="cell" data-execution_count="10">
+<div id="c33cf223" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>2.5</code></pre>
 </div>
@@ -403,14 +409,14 @@ window.Quarto = {
 \sigma^2 = \dfrac{(a_1-\bar a)^2+\ldots+(a_n-\bar a)^2}{\color{red}n},
 \]</span></p>
 <p>we use <code>np.var</code> method and to calculate the <em>population</em> standard deviation <span class="math inline">\(\sigma=\sqrt{\sigma^2}\)</span> we use <code>np.std</code> method. For example,</p>
-<div id="2b6bcc69" class="cell" data-execution_count="11">
+<div id="5eac843c" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>np.var(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>2.6399999999999997</code></pre>
 </div>
 </div>
 <p>Again, this is faster and more convenient than calculating them directly, e.g.&nbsp;instead of <code>np.var(a)</code> we could write</p>
-<div id="6dba6466" class="cell" data-execution_count="12">
+<div id="01e19ce8" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>((a <span class="op">-</span> np.mean(a))<span class="op">**</span><span class="dv">2</span>)<span class="op">/</span><span class="bu">len</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
 <pre><code>2.64</code></pre>
@@ -436,7 +442,7 @@ Do not miss this
 <h2 data-number="1.3" class="anchored" data-anchor-id="section-2"><span class="header-section-number">1.3</span> </h2>
 <div class="task">
 <p>Find the standard deviation of <code>a</code>. Check the answer.</p>
-<div id="d91e0432" class="cell" data-execution_count="13">
+<div id="2d7e57e1" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-display" data-execution_count="12">
 <pre><code>1.624807680927192</code></pre>
 </div>
@@ -453,14 +459,14 @@ s^2 = \dfrac{(a_1-\bar a)^2+\ldots+(a_n-\bar a)^2}{\color{red}n-1}.
 s^2=\frac{n}{n-1} \sigma^2,
 \]</span></p>
 <p>(where <span class="math inline">\(n=20\)</span> for the given <code>a</code>), however, it is better to use a special key <code>ddof = 1</code> inside <code>np.var</code>, where <code>ddof</code> stands for “delta degree of freedom”:</p>
-<div id="eb0cb092" class="cell" data-execution_count="14">
+<div id="ab0dba35" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>np.var(a, ddof <span class="op">=</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>2.7789473684210524</code></pre>
 </div>
 </div>
 <p>We can check that indeed e.g.</p>
-<div id="d81dae62" class="cell" data-execution_count="15">
+<div id="6caefd0d" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>np.var(a, ddof <span class="op">=</span> <span class="dv">1</span>) <span class="op">==</span> np.var(a)<span class="op">*</span><span class="dv">20</span><span class="op">/</span><span class="dv">19</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>True</code></pre>
@@ -472,7 +478,7 @@ s^2=\frac{n}{n-1} \sigma^2,
 <h2 data-number="1.4" class="anchored" data-anchor-id="section-3"><span class="header-section-number">1.4</span> </h2>
 <div class="task">
 <p>Find the <em>sample</em> standard deviation for <code>a</code> using an analogy with the previous commands. Check the answer.</p>
-<div id="37142f08" class="cell" data-execution_count="16">
+<div id="ab4209bb" class="cell" data-execution_count="16">
 <div class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>1.6670175069329813</code></pre>
 </div>
@@ -489,12 +495,12 @@ s^2=\frac{n}{n-1} \sigma^2,
 </figure>
 </div>
 <p>Now you can load it in your code, e.g.&nbsp;using Pandas library:</p>
-<div id="b6b3406f" class="cell" data-execution_count="17">
+<div id="80ee497e" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"sportsclub.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You may check e.g.&nbsp;the first <span class="math inline">\(6\)</span> lines of the file.</p>
-<div id="eae41ef2" class="cell" data-execution_count="18">
+<div id="c9ea8e63" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 <div>
@@ -546,7 +552,7 @@ s^2=\frac{n}{n-1} \sigma^2,
 </div>
 </div>
 <p>Now we may get the values of the first column (weights):</p>
-<div id="47702c5b" class="cell" data-execution_count="19">
+<div id="deecac3c" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"Weight"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="18">
 <pre><code>0      70
@@ -564,7 +570,7 @@ Name: Weight, Length: 200, dtype: int64</code></pre>
 </div>
 </div>
 <p>The output is a Pandas series. It may be converted to a Numpy array:</p>
-<div id="82088897" class="cell" data-execution_count="20">
+<div id="f9e778fe" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> df[<span class="st">"Weight"</span>].to_numpy()</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>b[<span class="dv">0</span>:<span class="dv">6</span>] <span class="co"># We show here, for an example, the first six elements only, from 0th to 5th</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="19">
@@ -575,7 +581,7 @@ Name: Weight, Length: 200, dtype: int64</code></pre>
 <h2 data-number="2.1" class="anchored" data-anchor-id="section-4"><span class="header-section-number">2.1</span> </h2>
 <div class="task">
 <p>Find the average weight of the members of the sports club. Check your answer.</p>
-<div id="e0b775d0" class="cell" data-execution_count="21">
+<div id="ebb56141" class="cell" data-execution_count="21">
 <div class="cell-output cell-output-display" data-execution_count="20">
 <pre><code>69.34</code></pre>
 </div>
@@ -586,7 +592,7 @@ Name: Weight, Length: 200, dtype: int64</code></pre>
 <h2 data-number="2.2" class="anchored" data-anchor-id="section-5"><span class="header-section-number">2.2</span> </h2>
 <div class="task">
 <p>Assign to variable <code>d</code> the Numpy array of the <em>heights</em> of all members of the sports club. Find the median and the variance of the heights. Check your answers.</p>
-<div id="d3edf16d" class="cell" data-execution_count="22">
+<div id="e443fa25" class="cell" data-execution_count="22">
 <div class="cell-output cell-output-display" data-execution_count="21">
 <pre><code>[170.0, 254.2239]</code></pre>
 </div>
@@ -597,7 +603,7 @@ Name: Weight, Length: 200, dtype: int64</code></pre>
 <h2 data-number="2.3" class="anchored" data-anchor-id="section-6"><span class="header-section-number">2.3</span> </h2>
 <div class="task">
 <p>Assign to variable <code>e</code> the Numpy array of the body mass indexes (BMI) of the club members: if a member has weight <span class="math inline">\(w\)</span> kg and height <span class="math inline">\(h\)</span> cm, then its BMI is <span class="math inline">\(10^4*\dfrac{w}{h^2}\)</span>. Remember that in Python all array operations are done component-wise. Find the mean and the standard deviation of <code>e</code>. Check your answer.</p>
-<div id="498a1e25" class="cell" data-execution_count="23">
+<div id="aa09533f" class="cell" data-execution_count="23">
 <div class="cell-output cell-output-display" data-execution_count="22">
 <pre><code>[24.900949943455288, 6.54617400802904]</code></pre>
 </div>
@@ -650,7 +656,7 @@ If you run this code in `Anaconda.cloud`, you will get an empty diagram with coo
 </tbody>
 </table>
 <p>The scatter plot code is the following:</p>
-<div id="1b4fed6d" class="cell" data-execution_count="24">
+<div id="63b1bea4" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>hours <span class="op">=</span> [<span class="dv">18</span>, <span class="dv">2</span>, <span class="dv">13</span>, <span class="dv">14</span>, <span class="dv">6</span>, <span class="dv">15</span>, <span class="dv">16</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">15</span>]</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>marks <span class="op">=</span> [<span class="dv">82</span>, <span class="dv">20</span>, <span class="dv">42</span>, <span class="dv">68</span>, <span class="dv">41</span>, <span class="dv">95</span>, <span class="dv">72</span>, <span class="dv">48</span>, <span class="dv">60</span>, <span class="dv">62</span>]</span>
@@ -672,7 +678,7 @@ If you run this code in `Anaconda.cloud`, you will get an empty diagram with coo
 <h2 data-number="3.1" class="anchored" data-anchor-id="section-7"><span class="header-section-number">3.1</span> </h2>
 <div class="task">
 <p>Take the first <span class="math inline">\(100\)</span> members of the sports club from the <code>sportsclub.csv</code> discussed before, and draw the scatter plot of heights (vertical axis) over weights (horizontal axis). Use green colours for the markers. Label the axes appropriately.</p>
-<div id="d0ce0d3c" class="cell" data-execution_count="25">
+<div id="72af398f" class="cell" data-execution_count="25">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -685,7 +691,7 @@ If you run this code in `Anaconda.cloud`, you will get an empty diagram with coo
 <section id="box-plot" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="box-plot">Box plot</h3>
 <p>Consider now a box-and-whisker plot. The following code produce the blox plot for the weights of all members of the sports club:</p>
-<div id="90cf1f7f" class="cell" data-execution_count="26">
+<div id="c8ac0db1" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>plt.boxplot(b)</span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -703,7 +709,7 @@ If you run this code in `Anaconda.cloud`, you will get an empty diagram with coo
 <h2 data-number="3.2" class="anchored" data-anchor-id="section-8"><span class="header-section-number">3.2</span> </h2>
 <div class="task">
 <p>Plot the horizontal box plot for the heights of all members of the sports club.</p>
-<div id="02eb2b54" class="cell" data-execution_count="27">
+<div id="d2e73a90" class="cell" data-execution_count="27">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -716,7 +722,7 @@ If you run this code in `Anaconda.cloud`, you will get an empty diagram with coo
 <section id="histogram" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="histogram">Histogram</h3>
 <p>Let’s create the histogram for the weights of all sports club members. Conside the histogram with <span class="math inline">\(20\)</span> bins.</p>
-<div id="915c2965" class="cell" data-execution_count="28">
+<div id="f8270b9a" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>plt.hist(b, <span class="dv">20</span>)</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Weights'</span>)</span>
@@ -731,7 +737,7 @@ If you run this code in `Anaconda.cloud`, you will get an empty diagram with coo
 </div>
 </div>
 <p>Recall that the change of the number of bins may drastically change the shapce of a histogram, e.g.</p>
-<div id="8fbef455" class="cell" data-execution_count="29">
+<div id="fb20c23c" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>plt.hist(b, <span class="dv">50</span>)                 <span class="co"># 50 bins</span></span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Weights'</span>)</span>
@@ -746,7 +752,7 @@ If you run this code in `Anaconda.cloud`, you will get an empty diagram with coo
 </div>
 </div>
 <p>or</p>
-<div id="70736c93" class="cell" data-execution_count="30">
+<div id="cf4efd80" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>plt.hist(b, <span class="dv">5</span>)                 <span class="co"># 5 bins</span></span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Weights'</span>)</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Counts'</span>)</span>
@@ -765,7 +771,7 @@ If you run this code in `Anaconda.cloud`, you will get an empty diagram with coo
 <h2 data-number="3.3" class="anchored" data-anchor-id="section-9"><span class="header-section-number">3.3</span> </h2>
 <div class="task">
 <p>Plot the histogram of heights of the all members of the sports club. Make all the bins of the size <span class="math inline">\(3\)</span> cm (perhaps, all but the last, the most right, one). To calculate the number of bins, use functions <code>min()</code> and <code>max()</code> and also <code>round()</code>.</p>
-<div id="9a390382" class="cell" data-execution_count="31">
+<div id="1ab5104c" class="cell" data-execution_count="31">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
