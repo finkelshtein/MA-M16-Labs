@@ -484,6 +484,115 @@
     ]
   },
   {
+    "objectID": "Lab3.html",
+    "href": "Lab3.html",
+    "title": "Lab 3",
+    "section": "",
+    "text": "Module scipy.stats of the famous library scipy provides various tools to work with probability and statistics in Python. Today, we consider several discrete distributions; to work with them will use the same structure of commands. In particular, any distribution will have the following methods:\n\nrvs - to generate (several) values of a random variable \\(X\\) (see below in this Lab)\npmf - to calculate probability mass function at any \\(k\\in\\mathbb{R}\\) \\[\np_X(k)=\\mathbb{P}(X=k)\n\\]\ncdf - to calculate the cumulative distribuion function \\[\nF_X(x)=\\sum_{k\\leq x} p_X(k)=\\mathbb{P}(X\\leq x)\n\\] recall that \\[\n\\mathbb{P}(a&lt;X\\leq b) = F_X(b)-F_X(a)\n\\]\nmean - to calculate the mathematical expectation (mean) \\(\\mathbb{E}(X)\\)\nvar - to calculate the varaince \\(\\mathrm{Var}(X)\\)\nstd - to calculate the standard deviation \\(\\sigma(X)=\\sqrt{\\mathrm{Var}(X)}\\)",
+    "crumbs": [
+      "Labs - Problems",
+      "Lab 3 - Problems"
+    ]
+  },
+  {
+    "objectID": "Lab3.html#section",
+    "href": "Lab3.html#section",
+    "title": "Lab 3",
+    "section": "2.1 ",
+    "text": "2.1 \n\nLet \\(X\\sim Bin(27, 0.45)\\).\n\nCalculate \\(\\mathbb{P}(X\\leq 20)\\). Check the answer:\n\n\n\n0.9994575733214396\n\n\n\nCalculate \\(\\mathbb{P}(X &lt; 10)\\). Check the answer:\n\n\n\n0.15256903022954094\n\n\n\nCalculate \\(\\mathbb{P}(7&lt;X\\leq 13)\\). Check the answer:\n\n\n\n0.666671672666459\n\n\n\nCalculate \\(\\mathbb{P}(7\\leq X\\leq 13)\\). Check the answer:\n\n\n\n0.6879613472859423",
+    "crumbs": [
+      "Labs - Problems",
+      "Lab 3 - Problems"
+    ]
+  },
+  {
+    "objectID": "Lab3.html#section-1",
+    "href": "Lab3.html#section-1",
+    "title": "Lab 3",
+    "section": "2.2 ",
+    "text": "2.2 \n\nA company manufactures light bulbs, and \\(95\\)% of them are of good quality, while the rest are defective. If a customer buys \\(50\\) light bulbs, what is the probability that:\n\nExactly \\(5\\) of them are defective? Check the answer:\n\n\n\n0.06584063715436628\n\n\n\nAt most \\(5\\) of them are defective? Check the answer:\n\n\n\n0.9622238270102227\n\n\n\nAt least \\(5\\) of them are defective? Check the answer:\n\n\n\n0.10361681014414348\n\n\n\nFind the expected value of the number of defective bulbs and the standard deviation of this quantity. Check the answer:\n\n\n\n[2.5, 1.541103500742244]",
+    "crumbs": [
+      "Labs - Problems",
+      "Lab 3 - Problems"
+    ]
+  },
+  {
+    "objectID": "Lab3.html#section-2",
+    "href": "Lab3.html#section-2",
+    "title": "Lab 3",
+    "section": "3.1 ",
+    "text": "3.1 \n\nLet \\(X\\sim Geom(0.4)\\). Calculate \\(\\mathbb{P}(7\\leq X &lt;10)\\). Check the answer.\n\n\n0.03657830400000006",
+    "crumbs": [
+      "Labs - Problems",
+      "Lab 3 - Problems"
+    ]
+  },
+  {
+    "objectID": "Lab3.html#section-3",
+    "href": "Lab3.html#section-3",
+    "title": "Lab 3",
+    "section": "3.2 ",
+    "text": "3.2 \n\nA lazy student has to take a quiz, where each question may have as an answer an integer number from \\(1\\) to \\(100\\) (different questions may have equal answers). Instead of preparation, the student is going to guess the answers. The quiz contains \\(20\\) questions. As soon as the student gives a correct answer, the quiz stops, and it is considered as a passed one. What is the probability that the student will pass the quiz?\nHint: the quiz may stop after either of \\(1,2,3,\\ldots,20\\) questions.\nCheck the answer:\n\n\n0.18209306240276918",
+    "crumbs": [
+      "Labs - Problems",
+      "Lab 3 - Problems"
+    ]
+  },
+  {
+    "objectID": "Lab3.html#section-4",
+    "href": "Lab3.html#section-4",
+    "title": "Lab 3",
+    "section": "4.1 ",
+    "text": "4.1 \n\nLet \\(X\\sim NB(5, 0.3)\\). Find \\(\\mathbb{P}(X&gt;10)\\). Check the answer.\n\n\n0.5154910592268431",
+    "crumbs": [
+      "Labs - Problems",
+      "Lab 3 - Problems"
+    ]
+  },
+  {
+    "objectID": "Lab3.html#section-5",
+    "href": "Lab3.html#section-5",
+    "title": "Lab 3",
+    "section": "4.2 ",
+    "text": "4.2 \n\nA lazy student has to take a quiz, where each question may have as an answer an integer number from \\(1\\) to \\(100\\) (different questions may have equal answers). Instead of preparation, the student is going to guess the answers. The quiz contains \\(20\\) questions. The quiz stops as soon as the student answers correctly \\(3\\) questions. What is the probability to pass the test for this student?\nHint: think on how many wrong answers could be made by the student to still pass the test.\nCheck the answer.\n\n\n0.0010035761681001162",
+    "crumbs": [
+      "Labs - Problems",
+      "Lab 3 - Problems"
+    ]
+  },
+  {
+    "objectID": "Lab3.html#section-7",
+    "href": "Lab3.html#section-7",
+    "title": "Lab 3",
+    "section": "5.1 ",
+    "text": "5.1 \n\nIn an insurance company, customers’ claims are raised at an average rate of \\(5\\) claims per working day. Calculate the probability that\n\nExactly \\(30\\) claims will be raised in one working week (Monday – Friday). Check the answer.\n\n\n\n0.04541278513011904\n\n\n\nAt least \\(8\\) claims will be raised in the next \\(2\\) working days. Check the answer.\n\n\n\n0.7797793533983011",
+    "crumbs": [
+      "Labs - Problems",
+      "Lab 3 - Problems"
+    ]
+  },
+  {
+    "objectID": "Lab3.html#section-8",
+    "href": "Lab3.html#section-8",
+    "title": "Lab 3",
+    "section": "6.1 ",
+    "text": "6.1 \n\nLet \\(X\\sim Po(3)\\) be a Poisson random variable with the parameter \\(\\lambda=3\\). Generate \\(100\\) random values of \\(X\\) fixing random_state = 111, and assign the resulting Numpy array to a variable f. Calculate the mean and the (population) variance of f. Check your answer. Don’t forget to load numpy first.\n\n\n[2.9, 2.87]\n\n\nWe know that the theoretical mean (expected value) \\(\\mathbb{E}(X)\\) and variance \\(\\mathrm{Var}(X)\\) for a Poisson random variable are equal to \\(\\lambda\\):\n\\[\n\\mathbb{E}(X)=\\mathrm{Var}(X)=\\lambda.\n\\]\nClearly, \\(2.9\\neq 3\\neq 2.87\\). To make the statistics more “matching” the probability, we need to increase the size of the data: let’s generate \\(10^6\\) random variables (keeping random_state = 111). Check the answers.\n\n\n[2.998107, 2.9899274165509997]",
+    "crumbs": [
+      "Labs - Problems",
+      "Lab 3 - Problems"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "1 Sign up to Anaconda (do it once)\n\nGo to https://anaconda.cloud\nSign up using your personal or University email address.\nAdvice: do not use your University password.\n\n\n\n2 Log in to Anaconda (do it for each lab)\n\nLogin to https://anaconda.cloud\nChoose “Notebooks” in the top menu:\n\n\n\nCreate a folder for all files related to this module:\n\n\nand name it “MA-M16”.\n\nOpen the created folder.\nPress blue button with “+”\n\n\nand choose any of anaconda-notebooks:\n\n\nRename the created file\n\n\ne.g. to “Lab1.ipynb”, “Lab2.ipynb” etc.\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
     "objectID": "Lab3-solutions.html",
     "href": "Lab3-solutions.html",
     "title": "Lab 3 - Solutions",
@@ -594,112 +703,102 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Introduction",
+    "objectID": "Lab5-solutions.html",
+    "href": "Lab5-solutions.html",
+    "title": "Lab 5 - Solutions",
     "section": "",
-    "text": "1 Sign up to Anaconda (do it once)\n\nGo to https://anaconda.cloud\nSign up using your personal or University email address.\nAdvice: do not use your University password.\n\n\n\n2 Log in to Anaconda (do it for each lab)\n\nLogin to https://anaconda.cloud\nChoose “Notebooks” in the top menu:\n\n\n\nCreate a folder for all files related to this module:\n\n\nand name it “MA-M16”.\n\nOpen the created folder.\nPress blue button with “+”\n\n\nand choose any of anaconda-notebooks:\n\n\nRename the created file\n\n\ne.g. to “Lab1.ipynb”, “Lab2.ipynb” etc.\n\n\n\n\n Back to top",
+    "text": "Continuous probability distributions in Python can be treated similarly to the discrete distributions. For example, for the uniform distribution we start with\n\nfrom scipy.stats import uniform\n\nWe know that a uniform random variables \\(X\\) depends on two parameters \\(a\\) and \\(b\\), namely, \\(X\\sim U(a,b)\\) is distributed uniformly on a segment \\([a,b]\\). The length of this segment is \\(b-a\\). In Python, the uniform distribution also depends on two parameters: loc = a and scale = b - a. The default values (which are used if these parameters are omitted) are loc = 0 and scale = 1 that corresponds to \\(U(0,1)\\).\n\n\nThe PDF \\(f_X(x)\\) is then 1/scale on \\([a,b]\\) and \\(0\\) otherwise. For example, for \\(X\\sim(1,6)\\), we can calculate\n\nuniform.pdf(3, loc = 1, scale = 5)\n\n0.2\n\n\nthat is \\(\\frac15\\), whereas,\n\nuniform.pdf(7, loc = 1, scale = 5)\n\n0.0\n\n\nas \\(7\\notin[1,6]\\).\nWe can also plot the graph of the PDF for \\(X\\sim U(1,6)\\), e.g. we plot it for \\(x\\in[-2,9]\\):\n\nimport matplotlib.pyplot as plt\nimport numpy as np\nx = np.linspace(-2, 9, 1000)\nplt.plot(x, uniform.pdf(x, loc = 1, scale = 5))\nplt.show()\n\n\n\n\n\n\n\n\nNot that the jumps at \\(x=1\\) and \\(x=6\\) are shown by vertical segments.\n\n\n\nSimilarly, CDF \\(F_X(x)\\) of \\(X\\sim U(a,b)\\) can be calculated by using the command uniform.cdf(x, loc = a, scale = b - a).\n\n\n\n\nPlot the graph of \\(F_X(x)\\) for \\(X\\sim U(1,6)\\) on the interval \\([-2,9]\\). Check the output:\n\n\nCode\nimport matplotlib.pyplot as plt\nimport numpy as np\nx = np.linspace(-2, 9, 1000)\nplt.plot(x, uniform.cdf(x, loc = 1, scale = 5))\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\n\n\\(n\\) values of the random variable \\(X\\sim U(a,b)\\) can be generated using the command uniform.rvs(size = n, loc = a, scale = b - a). As we discussed on Lab 3, if we want to fix the output, we use the key random_state, for example, the following output\n\nuniform.rvs(size = 3, loc = 1, scale = 5, random_state = 1)\n\narray([3.08511002, 4.60162247, 1.00057187])\n\n\nwill be the same each time you run the code, whereas if you omit random_state = 1 the result will be different every time you run the code (try!)\n\n\n\n\n\nAssign to variable x the array of \\(10^6\\) random values uniformly distributed on \\([0,1]\\), fix the random state equal to 123. Calculate the mean of \\(x\\). Check the output.\n\n\nCode\nx = uniform.rvs(size = 10 ** 6, random_state = 123) # Since loc = a = 0, scale = b-a = 1, we may omit their values\nnp.mean(x)\n\n\n0.49993343872814583\n\n\nAs you can see the output is pretty close to \\(0.5 =  \\frac{0+1}{2}=\\mathbb{E}(X)\\).",
     "crumbs": [
-      "Introduction"
+      "Labs - Solutions",
+      "Lab 5 - Solutions"
     ]
   },
   {
-    "objectID": "Lab3.html",
-    "href": "Lab3.html",
-    "title": "Lab 3",
+    "objectID": "Lab5-solutions.html#section",
+    "href": "Lab5-solutions.html#section",
+    "title": "Lab 5 - Solutions",
     "section": "",
-    "text": "Module scipy.stats of the famous library scipy provides various tools to work with probability and statistics in Python. Today, we consider several discrete distributions; to work with them will use the same structure of commands. In particular, any distribution will have the following methods:\n\nrvs - to generate (several) values of a random variable \\(X\\) (see below in this Lab)\npmf - to calculate probability mass function at any \\(k\\in\\mathbb{R}\\) \\[\np_X(k)=\\mathbb{P}(X=k)\n\\]\ncdf - to calculate the cumulative distribuion function \\[\nF_X(x)=\\sum_{k\\leq x} p_X(k)=\\mathbb{P}(X\\leq x)\n\\] recall that \\[\n\\mathbb{P}(a&lt;X\\leq b) = F_X(b)-F_X(a)\n\\]\nmean - to calculate the mathematical expectation (mean) \\(\\mathbb{E}(X)\\)\nvar - to calculate the varaince \\(\\mathrm{Var}(X)\\)\nstd - to calculate the standard deviation \\(\\sigma(X)=\\sqrt{\\mathrm{Var}(X)}\\)",
+    "text": "Plot the graph of \\(F_X(x)\\) for \\(X\\sim U(1,6)\\) on the interval \\([-2,9]\\). Check the output:\n\n\nCode\nimport matplotlib.pyplot as plt\nimport numpy as np\nx = np.linspace(-2, 9, 1000)\nplt.plot(x, uniform.cdf(x, loc = 1, scale = 5))\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\n\n\\(n\\) values of the random variable \\(X\\sim U(a,b)\\) can be generated using the command uniform.rvs(size = n, loc = a, scale = b - a). As we discussed on Lab 3, if we want to fix the output, we use the key random_state, for example, the following output\n\nuniform.rvs(size = 3, loc = 1, scale = 5, random_state = 1)\n\narray([3.08511002, 4.60162247, 1.00057187])\n\n\nwill be the same each time you run the code, whereas if you omit random_state = 1 the result will be different every time you run the code (try!)",
     "crumbs": [
-      "Labs - Problems",
-      "Lab 3 - Problems"
+      "Labs - Solutions",
+      "Lab 5 - Solutions"
     ]
   },
   {
-    "objectID": "Lab3.html#section",
-    "href": "Lab3.html#section",
-    "title": "Lab 3",
+    "objectID": "Lab5-solutions.html#section-1",
+    "href": "Lab5-solutions.html#section-1",
+    "title": "Lab 5 - Solutions",
+    "section": "",
+    "text": "Assign to variable x the array of \\(10^6\\) random values uniformly distributed on \\([0,1]\\), fix the random state equal to 123. Calculate the mean of \\(x\\). Check the output.\n\n\nCode\nx = uniform.rvs(size = 10 ** 6, random_state = 123) # Since loc = a = 0, scale = b-a = 1, we may omit their values\nnp.mean(x)\n\n\n0.49993343872814583\n\n\nAs you can see the output is pretty close to \\(0.5 =  \\frac{0+1}{2}=\\mathbb{E}(X)\\).",
+    "crumbs": [
+      "Labs - Solutions",
+      "Lab 5 - Solutions"
+    ]
+  },
+  {
+    "objectID": "Lab5-solutions.html#section-2",
+    "href": "Lab5-solutions.html#section-2",
+    "title": "Lab 5 - Solutions",
     "section": "2.1 ",
-    "text": "2.1 \n\nLet \\(X\\sim Bin(27, 0.45)\\).\n\nCalculate \\(\\mathbb{P}(X\\leq 20)\\). Check the answer:\n\n\n\n0.9994575733214396\n\n\n\nCalculate \\(\\mathbb{P}(X &lt; 10)\\). Check the answer:\n\n\n\n0.15256903022954094\n\n\n\nCalculate \\(\\mathbb{P}(7&lt;X\\leq 13)\\). Check the answer:\n\n\n\n0.666671672666459\n\n\n\nCalculate \\(\\mathbb{P}(7\\leq X\\leq 13)\\). Check the answer:\n\n\n\n0.6879613472859423",
+    "text": "2.1 \n\nGenerate \\(10^6\\) values of the random variable \\(X\\sim \\mathrm{Exp}(0.2)\\), using the random_state key equal to 12. Calculate the variance of the generated values, using the formula\n\\[\n\\mathrm{Var}(X) = \\mathbb{E}(X^2)- \\bigl(\\mathbb{E}(X)\\bigr)^2\n\\]\nCheck the answer.\n\n\nCode\nx = expon.rvs(size = 10**6, scale = 1/0.2, random_state = 12)\nnp.mean(x ** 2) - (np.mean(x)) ** 2\n\n\n25.04882818201701\n\n\nYou can also np.var command. Check the output in this case:\n\n\nCode\nnp.var(x)\n\n\n25.048828182017044\n\n\nThe results are almost identical (there is always some numerical error). Moreover, the result is close to the theoretical value \\(\\frac1{0.2^2}=25\\).\n\n\nPercentiles\nAnother important function available for all random variables in scipy.stats module is ppf, which provides percentiles. By the definition, for a random variable \\(X\\) and for any \\(q\\in[0,1]\\), the \\(q\\)-percentile of \\(X\\) is the number \\(a\\) such that\n\\[\nF_X(a) = \\mathbb{P}(X\\leq a) = q.\n\\]\nIn other words, the percentile is the inverse function to CDF.\nFor example, for \\(X\\sim \\mathrm{Exp}(0.2)\\),\n\na = expon.ppf(0.3, scale = 1/0.2)\na\n\n1.7833747196936622\n\n\nis \\(0.3\\)-percentile of \\(X\\), and then we can see that\n\nexpon.cdf(a, scale = 1/0.2)\n\n0.30000000000000004\n\n\nis effectively the initial \\(0.3\\).",
     "crumbs": [
-      "Labs - Problems",
-      "Lab 3 - Problems"
+      "Labs - Solutions",
+      "Lab 5 - Solutions"
     ]
   },
   {
-    "objectID": "Lab3.html#section-1",
-    "href": "Lab3.html#section-1",
-    "title": "Lab 3",
+    "objectID": "Lab5-solutions.html#section-3",
+    "href": "Lab5-solutions.html#section-3",
+    "title": "Lab 5 - Solutions",
     "section": "2.2 ",
-    "text": "2.2 \n\nA company manufactures light bulbs, and \\(95\\)% of them are of good quality, while the rest are defective. If a customer buys \\(50\\) light bulbs, what is the probability that:\n\nExactly \\(5\\) of them are defective? Check the answer:\n\n\n\n0.06584063715436628\n\n\n\nAt most \\(5\\) of them are defective? Check the answer:\n\n\n\n0.9622238270102227\n\n\n\nAt least \\(5\\) of them are defective? Check the answer:\n\n\n\n0.10361681014414348\n\n\n\nFind the expected value of the number of defective bulbs and the standard deviation of this quantity. Check the answer:\n\n\n\n[2.5, 1.541103500742244]",
+    "text": "2.2 \n\nLet \\(X\\sim \\mathrm{Exp}(0.7)\\). Find \\(b\\) such that\n\\[\n\\mathbb{P}(1 \\leq X \\leq b) = 0.4.\n\\]\nHint: use first the formula\n\\[\n\\mathbb{P}(a \\leq X \\leq b) = F_X(b) - F_X(a).\n\\]\nCheck the answer:\n\n\nCode\n# F(c) - F(1) = 0.4,\n# then F(c) = F(1) + 0.4\nq = expon.cdf(1, scale = 1/0.7) + 0.4\nexpon.ppf(q, scale = 1/0.7)\n\n\n3.3390409771454475",
     "crumbs": [
-      "Labs - Problems",
-      "Lab 3 - Problems"
+      "Labs - Solutions",
+      "Lab 5 - Solutions"
     ]
   },
   {
-    "objectID": "Lab3.html#section-2",
-    "href": "Lab3.html#section-2",
-    "title": "Lab 3",
+    "objectID": "Lab5-solutions.html#section-4",
+    "href": "Lab5-solutions.html#section-4",
+    "title": "Lab 5 - Solutions",
     "section": "3.1 ",
-    "text": "3.1 \n\nLet \\(X\\sim Geom(0.4)\\). Calculate \\(\\mathbb{P}(7\\leq X &lt;10)\\). Check the answer.\n\n\n0.03657830400000006",
+    "text": "3.1 \n\nPlot the graph of CDF for \\(X\\sim \\mathcal{N}(2,3^2)\\) (also on the interval \\(x\\in(-10,14)\\)). Use green colour and label the axis with \\(x\\) and \\(y=F(x)\\).\n\n\nCode\nx = np.linspace(-10, 14, 1000)\ny = norm.cdf(x, loc = 2, scale = 3)\nplt.plot(x, y, color = 'green')\nplt.xlabel('x')\nplt.ylabel('y=F(x)')\nplt.show()",
     "crumbs": [
-      "Labs - Problems",
-      "Lab 3 - Problems"
+      "Labs - Solutions",
+      "Lab 5 - Solutions"
     ]
   },
   {
-    "objectID": "Lab3.html#section-3",
-    "href": "Lab3.html#section-3",
-    "title": "Lab 3",
+    "objectID": "Lab5-solutions.html#section-5",
+    "href": "Lab5-solutions.html#section-5",
+    "title": "Lab 5 - Solutions",
     "section": "3.2 ",
-    "text": "3.2 \n\nA lazy student has to take a quiz, where each question may have as an answer an integer number from \\(1\\) to \\(100\\) (different questions may have equal answers). Instead of preparation, the student is going to guess the answers. The quiz contains \\(20\\) questions. As soon as the student gives a correct answer, the quiz stops, and it is considered as a passed one. What is the probability that the student will pass the quiz?\nHint: the quiz may stop after either of \\(1,2,3,\\ldots,20\\) questions.\nCheck the answer:\n\n\n0.18209306240276918",
+    "text": "3.2 \n\nCalculate the probability that a randomly selected individual has a height between \\(160\\) cm and \\(170\\) cm, given that the population mean height is \\(165.5\\) cm and the standard deviation is \\(10.2\\) cm, and that the heights follow the normal distribution.\nSub-task 1: calculate the answer using functions for general normal random variable \\(X\\sim \\mathcal{N}(\\mu,\\sigma^2)\\). Check the answer:\n\n\nCode\nnorm.cdf(170, loc = 165.5, scale = 10.2) - norm.cdf(160, loc = 165.5, scale = 10.2)\n\n\n0.37558835807069463\n\n\nSub-task 2: recalculate the answer using functions for standard normal random variable \\(Z\\sim \\mathcal{N}(0,1)\\). Check the answer:\n\n\nCode\nnorm.cdf((170-165.5)/10.2) - norm.cdf((160-165.5)/10.2)\n\n\n0.37558835807069463",
     "crumbs": [
-      "Labs - Problems",
-      "Lab 3 - Problems"
+      "Labs - Solutions",
+      "Lab 5 - Solutions"
     ]
   },
   {
-    "objectID": "Lab3.html#section-4",
-    "href": "Lab3.html#section-4",
-    "title": "Lab 3",
-    "section": "4.1 ",
-    "text": "4.1 \n\nLet \\(X\\sim NB(5, 0.3)\\). Find \\(\\mathbb{P}(X&gt;10)\\). Check the answer.\n\n\n0.5154910592268431",
+    "objectID": "Lab5-solutions.html#section-6",
+    "href": "Lab5-solutions.html#section-6",
+    "title": "Lab 5 - Solutions",
+    "section": "3.3 ",
+    "text": "3.3 \n\nLet \\(X\\sim\\mathcal{N}(12,5^2)\\). Find \\(c\\) such that\n\\[\n\\mathbb{P}(c \\leq X \\leq 15) = 0.5.\n\\]\nCheck the answer.\n\n\nCode\n# F(15) - F(c) = 0.5\n# F(c) = F(15) - 0.5\nq = norm.cdf(15, loc = 12, scale = 5) - 0.5\nnorm.ppf(q, loc = 12, scale = 5)\n\n\n8.235364852055193",
     "crumbs": [
-      "Labs - Problems",
-      "Lab 3 - Problems"
+      "Labs - Solutions",
+      "Lab 5 - Solutions"
     ]
   },
   {
-    "objectID": "Lab3.html#section-5",
-    "href": "Lab3.html#section-5",
-    "title": "Lab 3",
-    "section": "4.2 ",
-    "text": "4.2 \n\nA lazy student has to take a quiz, where each question may have as an answer an integer number from \\(1\\) to \\(100\\) (different questions may have equal answers). Instead of preparation, the student is going to guess the answers. The quiz contains \\(20\\) questions. The quiz stops as soon as the student answers correctly \\(3\\) questions. What is the probability to pass the test for this student?\nHint: think on how many wrong answers could be made by the student to still pass the test.\nCheck the answer.\n\n\n0.0010035761681001162",
+    "objectID": "Lab5-solutions.html#section-7",
+    "href": "Lab5-solutions.html#section-7",
+    "title": "Lab 5 - Solutions",
+    "section": "3.4 ",
+    "text": "3.4 \n\nGenerate \\(10^6\\) values of standard normal random variable. Check their standard deviation (use np.std function) and ensure that the result is close to \\(1\\).\n\n\nCode\nx = norm.rvs(size = 10 ** 6)\nnp.std(x)\n\n\n1.000109354435034\n\n\n(you may get a different answer, as we didn’t fix random_state here).",
     "crumbs": [
-      "Labs - Problems",
-      "Lab 3 - Problems"
-    ]
-  },
-  {
-    "objectID": "Lab3.html#section-7",
-    "href": "Lab3.html#section-7",
-    "title": "Lab 3",
-    "section": "5.1 ",
-    "text": "5.1 \n\nIn an insurance company, customers’ claims are raised at an average rate of \\(5\\) claims per working day. Calculate the probability that\n\nExactly \\(30\\) claims will be raised in one working week (Monday – Friday). Check the answer.\n\n\n\n0.04541278513011904\n\n\n\nAt least \\(8\\) claims will be raised in the next \\(2\\) working days. Check the answer.\n\n\n\n0.7797793533983011",
-    "crumbs": [
-      "Labs - Problems",
-      "Lab 3 - Problems"
-    ]
-  },
-  {
-    "objectID": "Lab3.html#section-8",
-    "href": "Lab3.html#section-8",
-    "title": "Lab 3",
-    "section": "6.1 ",
-    "text": "6.1 \n\nLet \\(X\\sim Po(3)\\) be a Poisson random variable with the parameter \\(\\lambda=3\\). Generate \\(100\\) random values of \\(X\\) fixing random_state = 111, and assign the resulting Numpy array to a variable f. Calculate the mean and the (population) variance of f. Check your answer. Don’t forget to load numpy first.\n\n\n[2.9, 2.87]\n\n\nWe know that the theoretical mean (expected value) \\(\\mathbb{E}(X)\\) and variance \\(\\mathrm{Var}(X)\\) for a Poisson random variable are equal to \\(\\lambda\\):\n\\[\n\\mathbb{E}(X)=\\mathrm{Var}(X)=\\lambda.\n\\]\nClearly, \\(2.9\\neq 3\\neq 2.87\\). To make the statistics more “matching” the probability, we need to increase the size of the data: let’s generate \\(10^6\\) random variables (keeping random_state = 111). Check the answers.\n\n\n[2.998107, 2.9899274165509997]",
-    "crumbs": [
-      "Labs - Problems",
-      "Lab 3 - Problems"
+      "Labs - Solutions",
+      "Lab 5 - Solutions"
     ]
   },
   {
