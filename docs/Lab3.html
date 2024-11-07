@@ -218,6 +218,12 @@ window.Quarto = {
  <span class="menu-text">Lab 5 - Problems</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Lab6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 6 - Problems</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
@@ -342,7 +348,7 @@ F_X(x)=\sum_{k\leq x} p_X(k)=\mathbb{P}(X\leq x)
 <section id="binomial-distribution" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Binomial distribution</h1>
 <p>First, one has to import <code>binom</code> class.</p>
-<div id="2dbf221b" class="cell" data-execution_count="2">
+<div id="bc01111d" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> binom</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>For <span class="math inline">\(X\sim Bin(n, p)\)</span>, one can use <code>binom.pmf(k, n, p)</code> to calculate, <span class="math display">\[
@@ -352,7 +358,7 @@ F_X(x)=\sum_{k\leq x} p_X(k)=\mathbb{P}(X\leq x)
 \]</span></p>
 <div class="proof remark">
 <p><span class="proof-title"><em>Remark</em>. </span>Note that <span class="math inline">\(X\sim Bin(n, p)\)</span> can take only values <span class="math inline">\(0, 1, 2, \ldots, n\)</span>. In particular, for example, for <span class="math inline">\(X\sim Bin(5, 0.1)\)</span>,</p>
-<div id="33d032e8" class="cell" data-execution_count="3">
+<div id="136f0473" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>[binom.pmf(<span class="dv">6</span>, <span class="dv">5</span>, <span class="fl">0.1</span>), binom.pmf(<span class="op">-</span><span class="dv">1</span>, <span class="dv">5</span>, <span class="fl">0.1</span>), binom.pmf(<span class="fl">2.5</span>, <span class="dv">5</span>, <span class="fl">0.1</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>[0.0, 0.0, 0.0]</code></pre>
@@ -362,7 +368,7 @@ F_X(x)=\sum_{k\leq x} p_X(k)=\mathbb{P}(X\leq x)
 <p>However, <code>cdf</code> is the cumulative probability, e.g. <span class="math display">\[
 \mathbb{P}(X\leq 1.5)=\mathbb{P}(X=0)+\mathbb{P}(X=1),
 \]</span> and hence, it’s not <span class="math inline">\(0\)</span>, namely,</p>
-<div id="7b0a171c" class="cell" data-execution_count="4">
+<div id="f4fc9ccd" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>binom.cdf(<span class="fl">1.5</span>, <span class="dv">5</span>, <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>0.9185399999999999</code></pre>
@@ -386,7 +392,7 @@ F_X(x)=\sum_{k\leq x} p_X(k)=\mathbb{P}(X\leq x)
 <ol type="1">
 <li>Calculate <span class="math inline">\(\mathbb{P}(X\leq 20)\)</span>. Check the answer:</li>
 </ol>
-<div id="60d135f0" class="cell" data-execution_count="5">
+<div id="ed0b3239" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>0.9994575733214396</code></pre>
 </div>
@@ -394,7 +400,7 @@ F_X(x)=\sum_{k\leq x} p_X(k)=\mathbb{P}(X\leq x)
 <ol start="2" type="1">
 <li>Calculate <span class="math inline">\(\mathbb{P}(X &lt; 10)\)</span>. Check the answer:</li>
 </ol>
-<div id="e30f943e" class="cell" data-execution_count="6">
+<div id="dd8367cb" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>0.15256903022954094</code></pre>
 </div>
@@ -402,7 +408,7 @@ F_X(x)=\sum_{k\leq x} p_X(k)=\mathbb{P}(X\leq x)
 <ol start="3" type="1">
 <li>Calculate <span class="math inline">\(\mathbb{P}(7&lt;X\leq 13)\)</span>. Check the answer:</li>
 </ol>
-<div id="66a5ec15" class="cell" data-execution_count="7">
+<div id="8873e453" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>0.666671672666459</code></pre>
 </div>
@@ -410,7 +416,7 @@ F_X(x)=\sum_{k\leq x} p_X(k)=\mathbb{P}(X\leq x)
 <ol start="4" type="1">
 <li>Calculate <span class="math inline">\(\mathbb{P}(7\leq X\leq 13)\)</span>. Check the answer:</li>
 </ol>
-<div id="0e649447" class="cell" data-execution_count="8">
+<div id="411fc3cb" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>0.6879613472859423</code></pre>
 </div>
@@ -424,7 +430,7 @@ F_X(x)=\sum_{k\leq x} p_X(k)=\mathbb{P}(X\leq x)
 <ol type="1">
 <li>Exactly <span class="math inline">\(5\)</span> of them are defective? Check the answer:</li>
 </ol>
-<div id="c9ba99c9" class="cell" data-execution_count="9">
+<div id="2e722147" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>0.06584063715436628</code></pre>
 </div>
@@ -432,7 +438,7 @@ F_X(x)=\sum_{k\leq x} p_X(k)=\mathbb{P}(X\leq x)
 <ol start="2" type="1">
 <li>At most <span class="math inline">\(5\)</span> of them are defective? Check the answer:</li>
 </ol>
-<div id="e57347e9" class="cell" data-execution_count="10">
+<div id="c898b7b5" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>0.9622238270102227</code></pre>
 </div>
@@ -440,7 +446,7 @@ F_X(x)=\sum_{k\leq x} p_X(k)=\mathbb{P}(X\leq x)
 <ol start="3" type="1">
 <li>At least <span class="math inline">\(5\)</span> of them are defective? Check the answer:</li>
 </ol>
-<div id="b674b369" class="cell" data-execution_count="11">
+<div id="57f25d92" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>0.10361681014414348</code></pre>
 </div>
@@ -448,7 +454,7 @@ F_X(x)=\sum_{k\leq x} p_X(k)=\mathbb{P}(X\leq x)
 <ol start="4" type="1">
 <li>Find the expected value of the number of defective bulbs and the standard deviation of this quantity. Check the answer:</li>
 </ol>
-<div id="c886a0e1" class="cell" data-execution_count="12">
+<div id="36a402ae" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-display" data-execution_count="11">
 <pre><code>[2.5, 1.541103500742244]</code></pre>
 </div>
@@ -462,7 +468,7 @@ F_X(x)=\sum_{k\leq x} p_X(k)=\mathbb{P}(X\leq x)
 \mathbb{P}(X = k) = (1-p)^{k-1} p,
 \]</span> and this the probability that the first “success” happened in the <span class="math inline">\(k\)</span>-th Bernoulli trial.</p>
 <p>To work with the geometric distribution in Python, one has to import <code>geom</code> class.</p>
-<div id="2e814b4d" class="cell" data-execution_count="13">
+<div id="7b5b4208" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> geom</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The functions are similar to the binomial case: <code>geom.pmf(k, p)</code>, <code>geom.cdf(k, p)</code>, <code>geom.mean(p)</code>, <code>geom.var(p)</code>, <code>geom.std(p)</code>.</p>
@@ -470,7 +476,7 @@ F_X(x)=\sum_{k\leq x} p_X(k)=\mathbb{P}(X\leq x)
 <h2 data-number="3.1" class="anchored" data-anchor-id="section-2"><span class="header-section-number">3.1</span> </h2>
 <div class="task">
 <p>Let <span class="math inline">\(X\sim Geom(0.4)\)</span>. Calculate <span class="math inline">\(\mathbb{P}(7\leq X &lt;10)\)</span>. Check the answer.</p>
-<div id="ba38190f" class="cell" data-execution_count="14">
+<div id="42d77a67" class="cell" data-execution_count="14">
 <div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>0.03657830400000006</code></pre>
 </div>
@@ -483,7 +489,7 @@ F_X(x)=\sum_{k\leq x} p_X(k)=\mathbb{P}(X\leq x)
 <p>A lazy student has to take a quiz, where each question may have as an answer an integer number from <span class="math inline">\(1\)</span> to <span class="math inline">\(100\)</span> (different questions may have equal answers). Instead of preparation, the student is going to guess the answers. The quiz contains <span class="math inline">\(20\)</span> questions. As soon as the student gives a correct answer, the quiz stops, and it is considered as a passed one. What is the probability that the student will pass the quiz?</p>
 <p><em>Hint:</em> the quiz may stop after either of <span class="math inline">\(1,2,3,\ldots,20\)</span> questions.</p>
 <p>Check the answer:</p>
-<div id="36601374" class="cell" data-execution_count="15">
+<div id="de4559b8" class="cell" data-execution_count="15">
 <div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>0.18209306240276918</code></pre>
 </div>
@@ -497,7 +503,7 @@ F_X(x)=\sum_{k\leq x} p_X(k)=\mathbb{P}(X\leq x)
 \mathbb{P}(X = k) = \binom{k+r-1}{k} p^r (1-p)^{k}.
 \]</span></p>
 <p>To work with the negative binomial distribution in Python, one has to import <code>nbinom</code> class.</p>
-<div id="f3d93316" class="cell" data-execution_count="16">
+<div id="5f80fb53" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> nbinom</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The previously discussed functions can be used similarly: <code>nbinom.pmf(k, r, p)</code>, <code>nbinom.cdf(k, r, p)</code>, <code>nbinom.mean(r, p)</code>, <code>nbinom.var(r, p)</code>, <code>nbinom.std(r, p)</code>.</p>
@@ -505,7 +511,7 @@ F_X(x)=\sum_{k\leq x} p_X(k)=\mathbb{P}(X\leq x)
 <h2 data-number="4.1" class="anchored" data-anchor-id="section-4"><span class="header-section-number">4.1</span> </h2>
 <div class="task">
 <p>Let <span class="math inline">\(X\sim NB(5, 0.3)\)</span>. Find <span class="math inline">\(\mathbb{P}(X&gt;10)\)</span>. Check the answer.</p>
-<div id="6ea9ce3c" class="cell" data-execution_count="17">
+<div id="bfe9e4b4" class="cell" data-execution_count="17">
 <div class="cell-output cell-output-display" data-execution_count="16">
 <pre><code>0.5154910592268431</code></pre>
 </div>
@@ -518,7 +524,7 @@ F_X(x)=\sum_{k\leq x} p_X(k)=\mathbb{P}(X\leq x)
 <p>A lazy student has to take a quiz, where each question may have as an answer an integer number from <span class="math inline">\(1\)</span> to <span class="math inline">\(100\)</span> (different questions may have equal answers). Instead of preparation, the student is going to guess the answers. The quiz contains <span class="math inline">\(20\)</span> questions. The quiz stops as soon as the student answers correctly <span class="math inline">\(3\)</span> questions. What is the probability to pass the test for this student?</p>
 <p><em>Hint:</em> think on how many wrong answers could be made by the student to still pass the test.</p>
 <p>Check the answer.</p>
-<div id="d87e242b" class="cell" data-execution_count="18">
+<div id="79a1cb5a" class="cell" data-execution_count="18">
 <div class="cell-output cell-output-display" data-execution_count="17">
 <pre><code>0.0010035761681001162</code></pre>
 </div>
@@ -533,7 +539,7 @@ F_X(x)=\sum_{k\leq x} p_X(k)=\mathbb{P}(X\leq x)
 P(X = k) = \frac{\lambda^k}{k!}e^{-\lambda}.
 \]</span></p>
 <p>To work with the Poisson distribution in Python, one has to import <code>poisson</code> class.</p>
-<div id="9b7fe4c1" class="cell" data-execution_count="19">
+<div id="10274ea7" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> poisson</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>and the functions are <code>poisson.pmf(k, lambda)</code>, <code>poisson.cdf(k, lambda)</code>, <code>poisson.mean(lambda)</code>, <code>poisson.var(lambda)</code>, <code>poisson.std(lambda)</code>.</p>
@@ -543,7 +549,7 @@ P(X = k) = \frac{\lambda^k}{k!}e^{-\lambda}.
 <p>Let <span class="math inline">\(X\sim Po(0.4)\)</span>. Find <span class="math display">\[
 \sum_{n=4}^\infty \mathbb{P}(X=n).
 \]</span> Check the answer.</p>
-<div id="bdde5cb8" class="cell" data-execution_count="20">
+<div id="5d2c4d2b" class="cell" data-execution_count="20">
 <div class="cell-output cell-output-display" data-execution_count="19">
 <pre><code>0.0007762513762070711</code></pre>
 </div>
@@ -557,7 +563,7 @@ P(X = k) = \frac{\lambda^k}{k!}e^{-\lambda}.
 <ol type="1">
 <li>Exactly <span class="math inline">\(30\)</span> claims will be raised in one working week (Monday – Friday). Check the answer.</li>
 </ol>
-<div id="5c881e0e" class="cell" data-execution_count="21">
+<div id="d390940f" class="cell" data-execution_count="21">
 <div class="cell-output cell-output-display" data-execution_count="20">
 <pre><code>0.04541278513011904</code></pre>
 </div>
@@ -565,7 +571,7 @@ P(X = k) = \frac{\lambda^k}{k!}e^{-\lambda}.
 <ol start="2" type="1">
 <li>At least <span class="math inline">\(8\)</span> claims will be raised in the next <span class="math inline">\(2\)</span> working days. Check the answer.</li>
 </ol>
-<div id="c1b7e0b5" class="cell" data-execution_count="22">
+<div id="ed2510ee" class="cell" data-execution_count="22">
 <div class="cell-output cell-output-display" data-execution_count="21">
 <pre><code>0.7797793533983011</code></pre>
 </div>
@@ -577,15 +583,15 @@ P(X = k) = \frac{\lambda^k}{k!}e^{-\lambda}.
 <h1 data-number="6"><span class="header-section-number">6</span> Generated data</h1>
 <p>We can also generate data, in particular, random data. For example, we can use for this <code>scipy</code> library. Recall that each of the random variable classes in this library has method <code>rvs</code> which can be used to generate (several) random values distributed according to the corresponding probability distribution. The general form of the command is <code>distribution_name.rvs(distribution_parameters, size = number_of_genereted_values)</code>, where <code>distribution_name</code> is one of e.g.&nbsp;<code>binom</code>, <code>geom</code>, <code>nbinom</code>, <code>poisson</code>, and instead of <code>number_of_genereted_values</code> you write a number, whereas you keep <code>size =</code> as it is (see below). The <code>distribution_parameters</code> will be all parameters needed for the given distribution, i.e.&nbsp;to generate <span class="math inline">\(5\)</span> binomial random variables you would use <code>binom.rvs(n, p, size = 5)</code> with certain <code>n</code> and <code>p</code> (and similarly for the negative binomial), but for <span class="math inline">\(5\)</span> geometrical random variables you would use <code>geom.rvs(p, size = 5)</code> with certain <code>p</code> only since there is only one parameter for the geometrical distribution.</p>
 <p>For example, in Task 2.2 above we considered a company which manufactures light bulbs, and <span class="math inline">\(95\)</span>% of them are of good quality, while the rest are defective. If a customer buys <span class="math inline">\(50\)</span> light bulbs, the random number <span class="math inline">\(X\)</span> of defective bulbs there has a binomial distribution, namely, <span class="math inline">\(X\sim Bin(50,0.05)\)</span>, as <span class="math inline">\(p=0.05\)</span> is the probability of a defective bulb. To generate e.g.&nbsp;<span class="math inline">\(7\)</span> random values of <span class="math inline">\(X\)</span>, we use the commands</p>
-<div id="45b49a25" class="cell" data-execution_count="23">
+<div id="2855c23d" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> binom</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>binom.rvs(<span class="dv">50</span>, <span class="fl">0.05</span>, size <span class="op">=</span> <span class="dv">7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="22">
-<pre><code>array([2, 1, 4, 3, 0, 3, 2], dtype=int64)</code></pre>
+<pre><code>array([2, 0, 1, 3, 4, 1, 5], dtype=int64)</code></pre>
 </div>
 </div>
 <p>If you run this command several times, you will probably get each time a different result, as the numbers are random. To fix an output, we should set a <code>random_state</code>:</p>
-<div id="f5bce6bc" class="cell" data-execution_count="24">
+<div id="57451ba3" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> binom <span class="co"># If you kept the previous cell, there is no need in this line</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> binom.rvs(<span class="dv">50</span>, <span class="fl">0.05</span>, size <span class="op">=</span> <span class="dv">7</span>, random_state <span class="op">=</span> <span class="dv">123</span>)</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -598,7 +604,7 @@ P(X = k) = \frac{\lambda^k}{k!}e^{-\lambda}.
 <h2 data-number="6.1" class="anchored" data-anchor-id="section-8"><span class="header-section-number">6.1</span> </h2>
 <div class="task">
 <p>Let <span class="math inline">\(X\sim Po(3)\)</span> be a Poisson random variable with the parameter <span class="math inline">\(\lambda=3\)</span>. Generate <span class="math inline">\(100\)</span> random values of <span class="math inline">\(X\)</span> fixing <code>random_state = 111</code>, and assign the resulting Numpy array to a variable <code>f</code>. Calculate the mean and the (population) variance of <code>f</code>. Check your answer. Don’t forget to load <code>numpy</code> first.</p>
-<div id="b71d68b6" class="cell" data-execution_count="25">
+<div id="357f18fc" class="cell" data-execution_count="25">
 <div class="cell-output cell-output-display" data-execution_count="24">
 <pre><code>[2.9, 2.87]</code></pre>
 </div>
@@ -608,7 +614,7 @@ P(X = k) = \frac{\lambda^k}{k!}e^{-\lambda}.
 \mathbb{E}(X)=\mathrm{Var}(X)=\lambda.
 \]</span></p>
 <p>Clearly, <span class="math inline">\(2.9\neq 3\neq 2.87\)</span>. To make the statistics more “matching” the probability, we need to increase the size of the data: let’s generate <span class="math inline">\(10^6\)</span> random variables (keeping <code>random_state = 111</code>). Check the answers.</p>
-<div id="d7b7aeaa" class="cell" data-execution_count="26">
+<div id="e79e75b9" class="cell" data-execution_count="26">
 <div class="cell-output cell-output-display" data-execution_count="25">
 <pre><code>[2.998107, 2.9899274165509997]</code></pre>
 </div>

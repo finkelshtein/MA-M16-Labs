@@ -221,6 +221,12 @@ window.Quarto = {
  <span class="menu-text">Lab 5 - Problems</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Lab6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 6 - Problems</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
@@ -369,8 +375,8 @@ r=\dfrac{S_{xy}}{\sqrt{S_{xx}S_{yy}}}.
 <p>Download file <a href="Birthweight.csv">Birthweight.csv</a> and upload it to <code>Anaconda.cloud</code>. Assign it to the dataframe named <code>df</code>. Show the first rows of <code>df</code>.</p>
 <p><em>Hint:</em> to import CSV file, use commands discussed in Lab 1. Don’t forget about <code>pandas</code> library.</p>
 <p>You should get the following output</p>
-<div id="eaa8fadb" class="cell" data-execution_count="2">
-<div class="cell-output cell-output-display" data-execution_count="65">
+<div id="6e118042" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="1">
 <div>
 
 
@@ -519,7 +525,7 @@ r=\dfrac{S_{xy}}{\sqrt{S_{xx}S_{yy}}}.
 <div class="task">
 <p>Plot a scatter plot making <code>length</code> data on the horizontal axes and <code>Birthweight</code> data on the vertical axes. Label axes appropriately, and show in labels the units (<code>in</code> and <code>lb</code>).</p>
 <p><em>Hint:</em> use commands discussed in Lab 3. Don’t forget about <code>matplotlib.pyplot</code> module. Note also that <code>matplotlib</code> allows to use Pandas series (e.g.&nbsp;dataframe columns), it’s <em>not necessary</em> to convert them into Numpy arrays using <code>.to_numpy()</code> command.</p>
-<div id="0f0189a5" class="cell" data-execution_count="3">
+<div id="6ebb7785" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -539,9 +545,9 @@ r=\dfrac{S_{xy}}{\sqrt{S_{xx}S_{yy}}}.
 <div class="task">
 <p>Convert columns <code>length</code> and <code>Birthweight</code> to Numpy arrays <code>x</code> and <code>y</code>, respectively. Assign <span class="math inline">\(\bar{x}\)</span> and <span class="math inline">\(\bar{y}\)</span> to <code>mx</code> and <code>my</code>, respectively. Note that you may use either <code>mean</code> or <code>np.mean</code> functions.</p>
 <p>Check your answer:</p>
-<div id="129e3253" class="cell" data-execution_count="5">
+<div id="cd3f6250" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>[mx, my]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="68">
+<div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>[19.928571428571427, 7.264285714285713]</code></pre>
 </div>
 </div>
@@ -552,9 +558,9 @@ r=\dfrac{S_{xy}}{\sqrt{S_{xx}S_{yy}}}.
 <div class="task">
 <p>Assign values of <span class="math inline">\(S_{xx}, S_{xy}, S_{yy}\)</span> to variables <code>sxx</code>, <code>sxy</code>, and <code>syy</code>, respectively (use the formulas at the beginning of this Lab). Note that you can use functions <code>sum</code> or <code>np.sum</code>, and remember about vector operations in Python.</p>
 <p>Check the answer:</p>
-<div id="e444cc7a" class="cell" data-execution_count="7">
+<div id="17c0668e" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>[sxx, sxy, syy]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="70">
+<div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>[50.785714285714285, 42.292857142857144, 72.49642857142857]</code></pre>
 </div>
 </div>
@@ -565,9 +571,9 @@ r=\dfrac{S_{xy}}{\sqrt{S_{xx}S_{yy}}}.
 <div class="task">
 <p>Assign values of <span class="math inline">\(\hat{\beta}_1\)</span> and <span class="math inline">\(\hat{\beta}_0\)</span> to variables <code>b1</code> and <code>b0</code>, respectively. Assign the Pearson regression coefficient to variable <code>r</code>. (To find the square root, you may use <code>np.sqrt</code> function.)</p>
 <p>Check the answer:</p>
-<div id="e5ab1a6f" class="cell" data-execution_count="9">
+<div id="d99b88af" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>[b0, b1, r]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="72">
+<div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>[-9.331645569620253, 0.8327707454289733, 0.6970082792022007]</code></pre>
 </div>
 </div>
@@ -575,24 +581,24 @@ r=\dfrac{S_{xy}}{\sqrt{S_{xx}S_{yy}}}.
 <section id="linregress-function" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="linregress-function">Linregress function</h3>
 <p>Instead of all these calculations, we can also use <code>linregress</code> class from <code>scipy.stats</code> module:</p>
-<div id="62d88a02" class="cell" data-execution_count="10">
+<div id="2f5abbb5" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> linregress</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>linregress(x,y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="73">
-<pre><code>LinregressResult(slope=0.8327707454289732, intercept=-9.331645569620253, rvalue=0.6970082792022005, pvalue=2.9301969030656806e-07, stderr=0.13546119087983002, intercept_stderr=2.7036545086005135)</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>LinregressResult(slope=0.8327707454289743, intercept=-9.331645569620274, rvalue=0.697008279202201, pvalue=2.9301969030655954e-07, stderr=0.13546119087983002, intercept_stderr=2.7036545086005135)</code></pre>
 </div>
 </div>
 <p>You may notice that it gives the same answers (up to a little calculation error), where <code>slope</code> stands for <code>b1</code> (that is indeed the slope of <span class="math inline">\(\hat{y}=\hat{\beta}_0+\hat{\beta}_1 x\)</span>), <code>intercept</code> stands for <code>b0</code>, and <code>rvalue</code> stands for <code>r</code>. You may access these values as follows:</p>
-<div id="f99f99ec" class="cell" data-execution_count="11">
+<div id="aa9e8e73" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>lr <span class="op">=</span> linregress(x,y)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>[lr.intercept, lr.slope, lr.rvalue]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="74">
-<pre><code>[-9.331645569620253, 0.8327707454289732, 0.6970082792022005]</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<pre><code>[-9.331645569620274, 0.8327707454289743, 0.697008279202201]</code></pre>
 </div>
 </div>
 <p>that is pretty simular to <code>[b0, b1, r]</code> calculated before.</p>
 <p>We are going now to draw now the graph of the regression line on the scatter plot. For this, we create an array of values on the horizontal axes by dividing the interval between <code>min(x)</code> and <code>max(x)</code> by e.g.&nbsp;<span class="math inline">\(100\)</span> parts (for this we will use <code>np.linespace</code> function), and calculate the values of the linear regression line at these points:</p>
-<div id="9ff6f76f" class="cell" data-execution_count="12">
+<div id="918c72c1" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>xvalues <span class="op">=</span> np.linspace(<span class="bu">min</span>(x), <span class="bu">max</span>(x), <span class="dv">100</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>yvalues <span class="op">=</span> lr.intercept <span class="op">+</span> lr.slope <span class="op">*</span> xvalues</span>
@@ -612,7 +618,7 @@ r=\dfrac{S_{xy}}{\sqrt{S_{xx}S_{yy}}}.
 <h2 data-number="1.6" class="anchored" data-anchor-id="section-5"><span class="header-section-number">1.6</span> </h2>
 <div class="task">
 <p>Combine the regression line with the scatter plot to get the following output:</p>
-<div id="ccd9c6d2" class="cell" data-execution_count="13">
+<div id="2ef41aee" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -622,10 +628,10 @@ r=\dfrac{S_{xy}}{\sqrt{S_{xx}S_{yy}}}.
 </div>
 </div>
 <p>As we can see, the regression line reflects the trend between weights and lengths, however, the values are “jumping” around the line. We could see that the correlation coefficient (see <code>lr.rvalue</code> or <code>r</code>) is not large:</p>
-<div id="1e860bb6" class="cell" data-execution_count="14">
+<div id="e4cdad35" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>lr.rvalue</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="77">
-<pre><code>0.6970082792022005</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="13">
+<pre><code>0.697008279202201</code></pre>
 </div>
 </div>
 <p>i.e.&nbsp;we see here a <em>moderate</em> correlation.</p>
@@ -635,7 +641,7 @@ r=\dfrac{S_{xy}}{\sqrt{S_{xx}S_{yy}}}.
 <h2 data-number="1.7" class="anchored" data-anchor-id="section-6"><span class="header-section-number">1.7</span> </h2>
 <div class="task">
 <p>Download now file <a href="Experience-Salary.csv">Experience-Salary.csv</a> which contains data on how the salary depends on experience. Repeat the previous steps to show the scatter plot together with the regression line:</p>
-<div id="e6d1ef7d" class="cell" data-execution_count="15">
+<div id="17c58364" class="cell" data-execution_count="15">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -645,10 +651,10 @@ r=\dfrac{S_{xy}}{\sqrt{S_{xx}S_{yy}}}.
 </div>
 </div>
 <p>You can see that here the regression line fits the data better. Indeed, in this case the correlation is higher:</p>
-<div id="a2cf58bb" class="cell" data-execution_count="16">
+<div id="23119f01" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>lr.rvalue <span class="co">#If you kept the notation lr for linregress object.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="79">
-<pre><code>0.8109692945840652</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="15">
+<pre><code>0.8109692945840655</code></pre>
 </div>
 </div>
 </div>
@@ -659,10 +665,10 @@ r=\dfrac{S_{xy}}{\sqrt{S_{xx}S_{yy}}}.
 <p>In contrast to the linear regression, the binary logistic regression can be applied if the dependent variable takes only two values, e.g.&nbsp;<span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span>. For example, download file <a href="colleges.csv">colleges.csv</a> and upload it to <code>Anaconda.cloud</code>.</p>
 <section id="investigating-data" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="investigating-data">Investigating data</h3>
-<div id="2aef27c9" class="cell" data-execution_count="17">
+<div id="2708ce95" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"colleges.csv"</span>)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>df.tail()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="80">
+<div class="cell-output cell-output-display" data-execution_count="16">
 <div>
 
 
@@ -720,24 +726,24 @@ r=\dfrac{S_{xy}}{\sqrt{S_{xx}S_{yy}}}.
 </div>
 <p>This dataset describes how much the marks in <code>gmat</code> and <code>gpa</code> exams (read Wikipedia for details about these exams, it’s not relevant now though) and <code>work_experience</code> affect whether a student was admitted to a US college.</p>
 <p>Note that we used here <code>tail</code> function, it shows the last rows of a dataframe. Note that the last index is <code>29</code> i.e.&nbsp;the dataframe contains 30 rows (the indexes start with <code>0</code> as usual). Another way to get the dimensions of the dataframe is</p>
-<div id="c1598452" class="cell" data-execution_count="18">
+<div id="1815151e" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>df.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="81">
+<div class="cell-output cell-output-display" data-execution_count="17">
 <pre><code>(30, 4)</code></pre>
 </div>
 </div>
 <p>i.e.&nbsp;there are 30 rows and 4 columns.</p>
 <p>As you can see, the <code>admitted</code> column contains only <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span>, where <span class="math inline">\(1\)</span> stands for admission, and <span class="math inline">\(0\)</span> for failure; more precisely, we can see this for the last rows only, but we can check this using the following Python trick:</p>
-<div id="20f4d52d" class="cell" data-execution_count="19">
+<div id="24d47463" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span>(df[<span class="st">'admitted'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="82">
+<div class="cell-output cell-output-display" data-execution_count="18">
 <pre><code>{0, 1}</code></pre>
 </div>
 </div>
 <p>Here <code>set</code> function returns the set of all values of the column (<em>unique</em> values as it is a set). An alternative Pandas code for this is</p>
-<div id="ce8c5abb" class="cell" data-execution_count="20">
+<div id="59015af2" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'admitted'</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="83">
+<div class="cell-output cell-output-display" data-execution_count="19">
 <pre><code>array([0, 1], dtype=int64)</code></pre>
 </div>
 </div>
@@ -745,14 +751,14 @@ r=\dfrac{S_{xy}}{\sqrt{S_{xx}S_{yy}}}.
 <section id="separating-data" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="separating-data">Separating data</h3>
 <p>Now we save the last row in a separate dataframe, call it <code>df_test</code>, and redefine <code>df</code> as the first 29 rows of the original <code>df</code> (you learned the functions below in Python lectures of MA-M06).</p>
-<div id="362652b0" class="cell" data-execution_count="21">
+<div id="ee8986a8" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>df_test <span class="op">=</span> df.iloc[<span class="op">-</span><span class="dv">1</span>]</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[:<span class="op">-</span><span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We can check that now</p>
-<div id="9396fe20" class="cell" data-execution_count="22">
+<div id="37381c80" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>df.tail()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="85">
+<div class="cell-output cell-output-display" data-execution_count="21">
 <div>
 
 
@@ -809,9 +815,9 @@ r=\dfrac{S_{xy}}{\sqrt{S_{xx}S_{yy}}}.
 </div>
 </div>
 <p>i.e.&nbsp;<code>df</code> contains 29 rows only, and</p>
-<div id="16fba7d8" class="cell" data-execution_count="23">
+<div id="411e0324" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>df_test</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="86">
+<div class="cell-output cell-output-display" data-execution_count="22">
 <pre><code>gmat               620.0
 gpa                  2.7
 work_experience      5.0
@@ -824,7 +830,7 @@ Name: 29, dtype: float64</code></pre>
 <section id="logistic-regression-for-1-independent-variable" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="logistic-regression-for-1-independent-variable">Logistic regression for 1 independent variable</h3>
 <p>We first study how much the mark in <code>gmat</code> affects the admission. We use the following code:</p>
-<div id="660e697e" class="cell" data-execution_count="24">
+<div id="9e1f85ce" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.formula.api <span class="im">as</span> smf</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> smf.logit(<span class="st">'admitted ~ gmat'</span>, data <span class="op">=</span> df).fit()</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>reg.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -833,7 +839,7 @@ Name: 29, dtype: float64</code></pre>
          Current function value: 0.485467
          Iterations 6</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="87">
+<div class="cell-output cell-output-display" data-execution_count="23">
 <table class="simpletable caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>Logit Regression Results</caption>
 <tbody>
@@ -857,13 +863,13 @@ Name: 29, dtype: float64</code></pre>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Date:</td>
-<td>Thu, 24 Oct 2024</td>
+<td>Wed, 06 Nov 2024</td>
 <td data-quarto-table-cell-role="th">Pseudo R-squ.:</td>
 <td>0.2990</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">Time:</td>
-<td>16:57:27</td>
+<td>23:32:27</td>
 <td data-quarto-table-cell-role="th">Log-Likelihood:</td>
 <td>-14.079</td>
 </tr>
@@ -921,10 +927,10 @@ Name: 29, dtype: float64</code></pre>
 \mathrm{logit} (p) = \hat{\beta}_0 + \hat{\beta}_1 x_1
 \]</span></p>
 <p>(here there is only one independent variable, <code>gmat</code>, hence, we use only <span class="math inline">\(x_1\)</span>), and the values of <code>coef</code> in the <code>summary</code> for <code>Intercept</code> is <span class="math inline">\(\hat{\beta}_0\)</span>, whereas the value of <code>gmat</code> in the <code>summary</code> is <span class="math inline">\(\hat{\beta}_1\)</span>. We can access these values directly:</p>
-<div id="c14c2ade" class="cell" data-execution_count="25">
+<div id="a938e052" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>[reg.params.iloc[<span class="dv">0</span>], reg.params.iloc[<span class="dv">1</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="88">
-<pre><code>[-17.676429305462698, 0.02718342681533622]</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="24">
+<pre><code>[-17.67642930546272, 0.027183426815336253]</code></pre>
 </div>
 </div>
 <p>Now, we are going to demonstrate the obtained result graphically. We know that (see Lecture Notes)</p>
@@ -932,7 +938,7 @@ Name: 29, dtype: float64</code></pre>
 p = \frac{e^{\hat{\beta}_0+\hat{\beta}_1 x_1}}{1+e^{\hat{\beta}_0+\hat{\beta}_1 x_1}}
 \]</span></p>
 <p>We are going now to plot the scatter plot of <code>admitted</code> vs <code>gmat</code> and plot on the same diagram the curve <span class="math inline">\(p=p(x_1)\)</span>. We will use <code>np.exp</code> function for the exponent.</p>
-<div id="7d13d1af" class="cell" data-execution_count="26">
+<div id="1de45463" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> df[<span class="st">'gmat'</span>].to_numpy()</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> df[<span class="st">'admitted'</span>].to_numpy()</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>plt.scatter(x1, p)</span>
@@ -952,10 +958,10 @@ p = \frac{e^{\hat{\beta}_0+\hat{\beta}_1 x_1}}{1+e^{\hat{\beta}_0+\hat{\beta}_1 
 </div>
 <p>We can see that the red function separates values of <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span>.</p>
 <p>This function can be used to make predictions about the admission. Namely, we take the value of <code>gmat</code> for the last student of the original dataframe, now stored in the separate dataframe <code>df_test</code>; and then we calculate <span class="math inline">\(p\)</span> at this <span class="math inline">\(x_1=\)</span><code>gmat</code>:</p>
-<div id="cb145e9f" class="cell" data-execution_count="27">
+<div id="3b0884e1" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>gmat <span class="op">=</span> df_test[<span class="st">'gmat'</span>]</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>np.exp(b0 <span class="op">+</span> b1 <span class="op">*</span> gmat)<span class="op">/</span>(<span class="dv">1</span> <span class="op">+</span> np.exp(b0 <span class="op">+</span> b1 <span class="op">*</span> gmat))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="90">
+<div class="cell-output cell-output-display" data-execution_count="26">
 <pre><code>0.30518983321629944</code></pre>
 </div>
 </div>
@@ -969,13 +975,13 @@ p = \frac{e^{\hat{\beta}_0+\hat{\beta}_1 x_1}}{1+e^{\hat{\beta}_0+\hat{\beta}_1 
 <h2 data-number="2.1" class="anchored" data-anchor-id="section-7"><span class="header-section-number">2.1</span> </h2>
 <div class="task">
 <p>Change the code as explained and get the following summary.</p>
-<div id="34cdb707" class="cell" data-execution_count="28">
+<div id="40a77758" class="cell" data-execution_count="28">
 <div class="cell-output cell-output-stdout">
 <pre><code>Optimization terminated successfully.
          Current function value: 0.322141
          Iterations 8</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="91">
+<div class="cell-output cell-output-display" data-execution_count="27">
 <table class="simpletable caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>Logit Regression Results</caption>
 <tbody>
@@ -999,13 +1005,13 @@ p = \frac{e^{\hat{\beta}_0+\hat{\beta}_1 x_1}}{1+e^{\hat{\beta}_0+\hat{\beta}_1 
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Date:</td>
-<td>Thu, 24 Oct 2024</td>
+<td>Wed, 06 Nov 2024</td>
 <td data-quarto-table-cell-role="th">Pseudo R-squ.:</td>
 <td>0.5348</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">Time:</td>
-<td>16:57:27</td>
+<td>23:32:27</td>
 <td data-quarto-table-cell-role="th">Log-Likelihood:</td>
 <td>-9.3421</td>
 </tr>
@@ -1077,7 +1083,7 @@ p = \frac{e^{\hat{\beta}_0+\hat{\beta}_1 x_1}}{1+e^{\hat{\beta}_0+\hat{\beta}_1 
 p = \frac{e^{\hat{\beta}_0+\hat{\beta}_1 x_1+\hat{\beta}_2 x_2}}{1+e^{\hat{\beta}_0+\hat{\beta}_1 x_1+\hat{\beta}_2 x_2}}
 \]</span></p>
 <p>We can show how <span class="math inline">\(p\)</span> separates the values (some lines of the code may be new for you - it’s just for your information, <strong>you are not required to learn them</strong>):</p>
-<div id="be3ec932" class="cell" data-execution_count="29">
+<div id="5d5b1319" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> df[<span class="st">'gmat'</span>].to_numpy()</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> df[<span class="st">'gpa'</span>].to_numpy()</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> df[<span class="st">'admitted'</span>].to_numpy()</span>
@@ -1102,11 +1108,11 @@ p = \frac{e^{\hat{\beta}_0+\hat{\beta}_1 x_1+\hat{\beta}_2 x_2}}{1+e^{\hat{\beta
 </div>
 </div>
 <p>As you can see, the red graph (surface) of <span class="math inline">\(p\)</span> separates values of <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span>. Again, we may try to predict the admission for the student with data stored in <code>df_test</code>. We assigned to <code>gmat</code> the corresponding mark, now we do the same for <code>gpa</code> and calculate <code>p</code> for these two values. As you can see, the result is much closer to <span class="math inline">\(0\)</span>, hence, we are more confident in our (correct) prediction that the student would not be admitted.</p>
-<div id="32abd594" class="cell" data-execution_count="30">
+<div id="11fbfa22" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>gpa <span class="op">=</span> df_test[<span class="st">'gpa'</span>]</span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>np.exp(b0 <span class="op">+</span> b1 <span class="op">*</span> gmat <span class="op">+</span> b2 <span class="op">*</span> gpa)<span class="op">/</span>(<span class="dv">1</span> <span class="op">+</span> np.exp(b0 <span class="op">+</span> b1 <span class="op">*</span> gmat <span class="op">+</span> b2 <span class="op">*</span> gpa))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="93">
-<pre><code>0.07118806995711177</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="29">
+<pre><code>0.07118806995711167</code></pre>
 </div>
 </div>
 <section id="logistic-regression-for-3-independent-variables" class="level3 unnumbered">
@@ -1121,7 +1127,7 @@ p = \frac{e^{\hat{\beta}_0+\hat{\beta}_1 x_1+\hat{\beta}_2 x_2}}{1+e^{\hat{\beta
 <p><span class="math display">\[
 \mathrm{logit} (p) = \hat{\beta}_0 + \hat{\beta}_1 x_1 + \hat{\beta}_2 x_2 + \hat{\beta}_3 x_3
 \]</span></p>
-<div id="3f6a6423" class="cell" data-execution_count="31">
+<div id="e2c29683" class="cell" data-execution_count="31">
 <div class="cell-output cell-output-stdout">
 <pre><code>Optimization terminated successfully.
          Current function value: 0.255306
@@ -1129,9 +1135,9 @@ p = \frac{e^{\hat{\beta}_0+\hat{\beta}_1 x_1+\hat{\beta}_2 x_2}}{1+e^{\hat{\beta
 </div>
 </div>
 <p>Check your answer:</p>
-<div id="12f8223e" class="cell" data-execution_count="32">
+<div id="b1e6b0ba" class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>reg.params</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="95">
+<div class="cell-output cell-output-display" data-execution_count="31">
 <pre><code>Intercept         -16.182243
 gmat                0.002624
 gpa                 3.258770
@@ -1149,9 +1155,9 @@ dtype: float64</code></pre>
 p = \frac{e^{\hat{\beta}_0+\hat{\beta}_1 x_1+\hat{\beta}_2 x_2+\hat{\beta}_3 x_3}}{1+e^{\hat{\beta}_0+\hat{\beta}_1 x_1+\hat{\beta}_2 x_2+\hat{\beta}_3 x_3}}
 \]</span></p>
 <p>for that student. Check the answer:</p>
-<div id="35c785a1" class="cell" data-execution_count="33">
-<div class="cell-output cell-output-display" data-execution_count="96">
-<pre><code>0.3133331286316772</code></pre>
+<div id="2dad03a5" class="cell" data-execution_count="33">
+<div class="cell-output cell-output-display" data-execution_count="32">
+<pre><code>0.31333312863167756</code></pre>
 </div>
 </div>
 </div>
