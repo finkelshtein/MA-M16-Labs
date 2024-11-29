@@ -302,6 +302,12 @@ window.Quarto = {
  <span class="menu-text">Lab 8 - Solutions</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Lab9-solutions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 9 - Solutions</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -368,21 +374,21 @@ window.Quarto = {
 <section id="uniform-distribution" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Uniform Distribution</h1>
 <p>Continuous probability distributions in Python can be treated similarly to the discrete distributions. For example, for the uniform distribution we start with</p>
-<div id="651ac644" class="cell" data-execution_count="2">
+<div id="1301e0e8" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> uniform</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We know that a uniform random variables <span class="math inline">\(X\)</span> depends on two parameters <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, namely, <span class="math inline">\(X\sim U(a,b)\)</span> is distributed uniformly on a segment <span class="math inline">\([a,b]\)</span>. The length of this segment is <span class="math inline">\(b-a\)</span>. In Python, the uniform distribution also depends on two parameters: <code>loc = a</code> and <code>scale = b - a</code>. The default values (which are used if these parameters are omitted) are <code>loc = 0</code> and <code>scale = 1</code> that corresponds to <span class="math inline">\(U(0,1)\)</span>.</p>
 <section id="probability-density-function" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="probability-density-function">Probability Density Function</h3>
 <p>The PDF <span class="math inline">\(f_X(x)\)</span> is then <code>1/scale</code> on <span class="math inline">\([a,b]\)</span> and <span class="math inline">\(0\)</span> otherwise. For example, for <span class="math inline">\(X\sim(1,6)\)</span>, we can calculate</p>
-<div id="58ea7391" class="cell" data-execution_count="3">
+<div id="7ea820c7" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>uniform.pdf(<span class="dv">3</span>, loc <span class="op">=</span> <span class="dv">1</span>, scale <span class="op">=</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>0.2</code></pre>
 </div>
 </div>
 <p>that is <span class="math inline">\(\frac15\)</span>, whereas,</p>
-<div id="84c9c9a2" class="cell" data-execution_count="4">
+<div id="2ba8df6e" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>uniform.pdf(<span class="dv">7</span>, loc <span class="op">=</span> <span class="dv">1</span>, scale <span class="op">=</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>0.0</code></pre>
@@ -390,7 +396,7 @@ window.Quarto = {
 </div>
 <p>as <span class="math inline">\(7\notin[1,6]\)</span>.</p>
 <p>We can also plot the graph of the PDF for <span class="math inline">\(X\sim U(1,6)\)</span>, e.g.&nbsp;we plot it for <span class="math inline">\(x\in[-2,9]\)</span>:</p>
-<div id="564da9d9" class="cell" data-execution_count="5">
+<div id="f2ca853f" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="dv">9</span>, <span class="dv">1000</span>)</span>
@@ -414,7 +420,7 @@ window.Quarto = {
 <h2 data-number="1.1" class="anchored" data-anchor-id="section"><span class="header-section-number">1.1</span> </h2>
 <div class="task">
 <p>Plot the graph of <span class="math inline">\(F_X(x)\)</span> for <span class="math inline">\(X\sim U(1,6)\)</span> on the interval <span class="math inline">\([-2,9]\)</span>. Check the output:</p>
-<div id="74cb01d8" class="cell" data-execution_count="6">
+<div id="50ccb4aa" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -427,7 +433,7 @@ window.Quarto = {
 <section id="generating-random-values" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="generating-random-values">Generating Random Values</h3>
 <p><span class="math inline">\(n\)</span> values of the random variable <span class="math inline">\(X\sim U(a,b)\)</span> can be generated using the command <code>uniform.rvs(size = n, loc = a, scale = b - a)</code>. As we discussed on Lab 3, if we want to fix the output, we use the key <code>random_state</code>, for example, the following output</p>
-<div id="34d65549" class="cell" data-execution_count="7">
+<div id="d0cb5db7" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>uniform.rvs(size <span class="op">=</span> <span class="dv">3</span>, loc <span class="op">=</span> <span class="dv">1</span>, scale <span class="op">=</span> <span class="dv">5</span>, random_state <span class="op">=</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>array([3.08511002, 4.60162247, 1.00057187])</code></pre>
@@ -440,7 +446,7 @@ window.Quarto = {
 <h2 data-number="1.2" class="anchored" data-anchor-id="section-1"><span class="header-section-number">1.2</span> </h2>
 <div class="task">
 <p>Assign to variable <code>x</code> the array of <span class="math inline">\(10^6\)</span> random values uniformly distributed on <span class="math inline">\([0,1]\)</span>, fix the random state equal to <code>123</code>. Calculate the mean of <span class="math inline">\(x\)</span>. Check the output.</p>
-<div id="a5d8e861" class="cell" data-execution_count="8">
+<div id="dbfde505" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>0.49993343872814583</code></pre>
 </div>
@@ -466,12 +472,12 @@ F_X(x) = \begin{cases}
 \mathrm{Var}(X) = \mathbb{E}(X^2)- \bigl(\mathbb{E}(X)\bigr)^2= \frac1{\lambda^2}.
 \]</span></p>
 <p>In Python, we first load the corresponding class</p>
-<div id="23315486" class="cell" data-execution_count="9">
+<div id="2874e5ef" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> expon</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Next, we use the same commands, e.g.&nbsp;<code>expon.pdf</code>, <code>expon.cdf</code>, <code>expon.rvs</code>, however, the key <code>scale</code> in this command is inverse to <span class="math inline">\(\lambda\)</span>: <code>scale = 1/lambda</code>.</p>
 <p>For example, to calculate <span class="math inline">\(f_X(1)\)</span> for <span class="math inline">\(X\sim \mathrm{Exp}(0.2)\)</span>, we use the command</p>
-<div id="51983c44" class="cell" data-execution_count="10">
+<div id="fb521066" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>expon.pdf(<span class="dv">1</span>, scale <span class="op">=</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>0.16374615061559636</code></pre>
@@ -484,13 +490,13 @@ F_X(x) = \begin{cases}
 <p>Generate <span class="math inline">\(10^6\)</span> values of the random variable <span class="math inline">\(X\sim \mathrm{Exp}(0.2)\)</span>, using the <code>random_state</code> key equal to <code>12</code>. Calculate the variance of the generated values, using the formula <span class="math display">\[
 \mathrm{Var}(X) = \mathbb{E}(X^2)- \bigl(\mathbb{E}(X)\bigr)^2
 \]</span> Check the answer.</p>
-<div id="e37a31d6" class="cell" data-execution_count="11">
+<div id="9f4831cc" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>25.04882818201701</code></pre>
 </div>
 </div>
 <p>You can also use <code>np.var</code> command. Check the output in this case:</p>
-<div id="dbc2c5b4" class="cell" data-execution_count="12">
+<div id="5d440acd" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-display" data-execution_count="11">
 <pre><code>25.048828182017044</code></pre>
 </div>
@@ -503,7 +509,7 @@ F_X(x) = \begin{cases}
 F_X(a) = \mathbb{P}(X\leq a) = q.
 \]</span> In other words, the percentile is the inverse function to CDF.</p>
 <p>For example, for <span class="math inline">\(X\sim \mathrm{Exp}(0.2)\)</span>,</p>
-<div id="5d96da85" class="cell" data-execution_count="13">
+<div id="909cce4d" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> expon.ppf(<span class="fl">0.3</span>, scale <span class="op">=</span> <span class="dv">1</span><span class="op">/</span><span class="fl">0.2</span>)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
@@ -511,7 +517,7 @@ F_X(a) = \mathbb{P}(X\leq a) = q.
 </div>
 </div>
 <p>is <span class="math inline">\(0.3\)</span>-percentile of <span class="math inline">\(X\)</span>, and then we can see that</p>
-<div id="c696247b" class="cell" data-execution_count="14">
+<div id="588d3a37" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>expon.cdf(a, scale <span class="op">=</span> <span class="dv">1</span><span class="op">/</span><span class="fl">0.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>0.30000000000000004</code></pre>
@@ -528,7 +534,7 @@ F_X(a) = \mathbb{P}(X\leq a) = q.
 \]</span> <em>Hint:</em> use first the formula <span class="math display">\[
 \mathbb{P}(a \leq X \leq b) = F_X(b) - F_X(a).
 \]</span> Check the answer:</p>
-<div id="a696b4cf" class="cell" data-execution_count="15">
+<div id="e994a370" class="cell" data-execution_count="15">
 <div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>3.3390409771454475</code></pre>
 </div>
@@ -547,12 +553,12 @@ f_X(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-\mu)^2}{2\sigma^2}}.
 \end{aligned}
 \]</span></p>
 <p>We start with</p>
-<div id="38d81032" class="cell" data-execution_count="16">
+<div id="d9897875" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The PDF can be used in the code with the command <code>norm.pdf(x, loc, scale)</code> where <code>loc</code> stands for <span class="math inline">\(\mu\)</span> and <code>scale</code> stands for <span class="math inline">\(\sigma\)</span>. Similarly, one can use <code>norm.cdf(x, loc, scale)</code>, <code>norm.ppf(q, loc, scale)</code>, and <code>norm.rvs(loc, scale, size)</code> as above. The default values are <code>loc = 0</code> and <code>scale = 1</code> that corresponds to the <em>standard normal distribution</em> <span class="math inline">\(Z\sim\mathcal{N}(0,1)\)</span>.</p>
 <p>For example, the following code plots the graph of <span class="math inline">\(f_X(x)\)</span> for <span class="math inline">\(X\sim \mathcal{N}(2,3^2)\)</span> (on the interval <span class="math inline">\(x\in(-10,14)\)</span> - for example). The graph is in red colour and the axes are properly labelled.</p>
-<div id="fd4e82cb" class="cell" data-execution_count="17">
+<div id="24673f8f" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming that you previously loaded numpy and matplotlib</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">10</span>, <span class="dv">14</span>, <span class="dv">1000</span>)</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> norm.pdf(x, loc <span class="op">=</span> <span class="dv">2</span>, scale <span class="op">=</span> <span class="dv">3</span>)</span>
@@ -572,7 +578,7 @@ f_X(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-\mu)^2}{2\sigma^2}}.
 <h2 data-number="3.1" class="anchored" data-anchor-id="section-4"><span class="header-section-number">3.1</span> </h2>
 <div class="task">
 <p>Plot the graph of CDF for <span class="math inline">\(X\sim \mathcal{N}(2,3^2)\)</span> (also on the interval <span class="math inline">\(x\in(-10,14)\)</span>). Use green colour and label the axis with <span class="math inline">\(x\)</span> and <span class="math inline">\(y=F(x)\)</span>.</p>
-<div id="3670918a" class="cell" data-execution_count="18">
+<div id="0cc301b6" class="cell" data-execution_count="18">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -588,13 +594,13 @@ f_X(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-\mu)^2}{2\sigma^2}}.
 <div class="task">
 <p>Calculate the probability that a randomly selected individual has a height between <span class="math inline">\(160\)</span> cm and <span class="math inline">\(170\)</span> cm, given that the population mean height is <span class="math inline">\(165.5\)</span> cm and the standard deviation is <span class="math inline">\(10.2\)</span> cm, and that the heights follow the normal distribution.</p>
 <p><strong>Sub-task 1:</strong> calculate the answer using functions for general normal random variable <span class="math inline">\(X\sim \mathcal{N}(\mu,\sigma^2)\)</span>. Check the answer:</p>
-<div id="147015bd" class="cell" data-execution_count="19">
+<div id="411cff51" class="cell" data-execution_count="19">
 <div class="cell-output cell-output-display" data-execution_count="18">
 <pre><code>0.37558835807069463</code></pre>
 </div>
 </div>
 <p><strong>Sub-task 2:</strong> recalculate the answer using functions for standard normal random variable <span class="math inline">\(Z\sim \mathcal{N}(0,1)\)</span>. Check the answer:</p>
-<div id="8eeb9c10" class="cell" data-execution_count="20">
+<div id="5b395dc0" class="cell" data-execution_count="20">
 <div class="cell-output cell-output-display" data-execution_count="19">
 <pre><code>0.37558835807069463</code></pre>
 </div>
@@ -607,7 +613,7 @@ f_X(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-\mu)^2}{2\sigma^2}}.
 <p>Let <span class="math inline">\(X\sim\mathcal{N}(12,5^2)\)</span>. Find <span class="math inline">\(c\)</span> such that <span class="math display">\[
 \mathbb{P}(c \leq X \leq 15) = 0.5.
 \]</span> Check the answer.</p>
-<div id="a3eb01f1" class="cell" data-execution_count="21">
+<div id="0904c691" class="cell" data-execution_count="21">
 <div class="cell-output cell-output-display" data-execution_count="20">
 <pre><code>8.235364852055193</code></pre>
 </div>
@@ -618,9 +624,9 @@ f_X(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-\mu)^2}{2\sigma^2}}.
 <h2 data-number="3.4" class="anchored" data-anchor-id="section-7"><span class="header-section-number">3.4</span> </h2>
 <div class="task">
 <p>Generate <span class="math inline">\(10^6\)</span> values of standard normal random variable. Check their standard deviation (use <code>np.std</code> function) and ensure that the result is close to <span class="math inline">\(1\)</span>.</p>
-<div id="ded6bfe1" class="cell" data-execution_count="22">
+<div id="fd013504" class="cell" data-execution_count="22">
 <div class="cell-output cell-output-display" data-execution_count="21">
-<pre><code>0.9995861348977593</code></pre>
+<pre><code>0.9996313574220077</code></pre>
 </div>
 </div>
 <p>(you may get a different answer, as we didn’t fix <code>random_state</code> here).</p>
@@ -630,7 +636,7 @@ f_X(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-\mu)^2}{2\sigma^2}}.
 <section id="if-you-have-time" class="level1 unnumbered">
 <h1 class="unnumbered">If you have time</h1>
 <p>As you could see, we often need to calculate different functions for the same values of the parameters, e.g.&nbsp;in the example we considered earlier:</p>
-<div id="d77ad3ee" class="cell" data-execution_count="23">
+<div id="12670b41" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> expon.ppf(<span class="fl">0.3</span>, scale <span class="op">=</span> <span class="dv">1</span><span class="op">/</span><span class="fl">0.2</span>)</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>expon.cdf(a, scale <span class="op">=</span> <span class="dv">1</span><span class="op">/</span><span class="fl">0.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="22">
@@ -638,7 +644,7 @@ f_X(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-\mu)^2}{2\sigma^2}}.
 </div>
 </div>
 <p>In this case, we can also assign to a variable the distribution with needed values of parameters, and then use that variable with all methods of the distribution. E.g. the example above can be also rewritten</p>
-<div id="176aab17" class="cell" data-execution_count="24">
+<div id="3e6e4042" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>rv <span class="op">=</span> expon(scale <span class="op">=</span> <span class="dv">1</span><span class="op">/</span><span class="fl">0.2</span>)</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> rv.ppf(<span class="fl">0.3</span>)</span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>rv.cdf(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
