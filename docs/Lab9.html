@@ -385,7 +385,7 @@ X_n &amp; = a X_{n-1} + Z_n,\\
 </ul>
 <p><span class="math inline">\(X_0\)</span> can be chosen as an arbitrary number. Next, we will model <span class="math inline">\(Z_1,\ldots,Z_n\)</span> as i.i.d. standard normal r.v.: <span class="math inline">\(Z_i\sim \mathcal{N}(0,1)\)</span>.</p>
 <p>Let’s generate first <span class="math inline">\(1000\)</span> values of <span class="math inline">\(\{X_n\}\)</span> (i.e.&nbsp;<span class="math inline">\(X_1,\ldots,X_{1000}\)</span>) for <span class="math inline">\(a=0.999\)</span>; recall that then <span class="math inline">\(\{X_n\}\)</span> is stationary. We will use a loop from <span class="math inline">\(1\)</span> to <span class="math inline">\(n=1000\)</span>. We choose <span class="math inline">\(X_0=1\)</span>. Note that if <span class="math inline">\(X\)</span> is stored in a Numpy array, it’s better to create first an “empty” array with all entries equal to <span class="math inline">\(0\)</span>, and then just assign (otherwise, the array would become larger on each step, and this is very much time and memory consuming). So, let’s run the following code, and plot the corresponding time series:</p>
-<div id="487b9e0b" class="cell" data-execution_count="1">
+<div id="ea502c85" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -401,13 +401,13 @@ X_n &amp; = a X_{n-1} + Z_n,\\
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Lab9_files/figure-html/cell-2-output-1.png" width="566" height="411" class="figure-img"></p>
+<p><img src="Lab9_files/figure-html/cell-2-output-1.png" width="577" height="411" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>alternatively, we could generate <span class="math inline">\(Z_i\)</span> on each step:</p>
-<div id="742dfaa8" class="cell" data-execution_count="2">
+<div id="9465680a" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -435,7 +435,7 @@ X_n &amp; = a X_{n-1} + Z_n,\\
 <div class="task">
 <p>Generate the first <span class="math inline">\(10^6\)</span> values of the time series <span class="math inline">\(\{X_n\}\)</span> and plot the graph. <strong>Include some comments into your code explaining the steps.</strong> (Recall that comments in Python are any text after <code>#</code> symbol.)</p>
 <p>Your output should be similar to this:</p>
-<div id="dbc447b9" class="cell" data-execution_count="3">
+<div id="88ab9ae4" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -459,11 +459,11 @@ X_n &amp; = a X_{n-1} + Z_n,\\
 <h2 data-number="1.3" class="anchored" data-anchor-id="section-2"><span class="header-section-number">1.3</span> </h2>
 <div class="task">
 <p>Now generate the first <span class="math inline">\(10^6\)</span> of the time series <span class="math inline">\(Y_n= Y_{n-1}+W_n\)</span>, where <span class="math inline">\(\{W_n\}\)</span> is <strong>another</strong> white noise, <span class="math inline">\(W_n\sim\mathcal{N}(0,1)\)</span>, generated separately from <span class="math inline">\(\{Z_n\}\)</span>. Choose <span class="math inline">\(Y_0=5\)</span>. Store it in <code>y</code> and make two graphs for <span class="math inline">\(X_n\)</span> and <span class="math inline">\(Y_n\)</span> on the same plot (by typing two commands <code>plt.plot</code> with one <code>plt.show()</code> at the end). Make them in different colours: blue for <code>x</code> and red for <code>y</code>.</p>
-<div id="3e0d26f7" class="cell" data-execution_count="4">
+<div id="1c8a0635" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Lab9_files/figure-html/cell-5-output-1.png" width="586" height="428" class="figure-img"></p>
+<p><img src="Lab9_files/figure-html/cell-5-output-1.png" width="594" height="430" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -490,7 +490,7 @@ X_4 &amp; = a X_3 + b X_2 + Z_4,\\
 <h2 data-number="1.4" class="anchored" data-anchor-id="section-3"><span class="header-section-number">1.4</span> </h2>
 <div class="task">
 <p>Consider the example from a lecture: <span class="math inline">\(X_n=\frac1{12} X_{n-1}+\frac12 X_{n-2}+Z_n\)</span>. Set <span class="math inline">\(X_0=X_1=1\)</span>. Generate <span class="math inline">\(10^4\)</span> values (note that you should start from <span class="math inline">\(n=2\)</span>) and assign them to <code>x</code>. Plot the graph of <code>x</code>.</p>
-<div id="880220d8" class="cell" data-execution_count="5">
+<div id="faa4ba06" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -523,7 +523,7 @@ X_4 &amp; = a X_3 + b X_2 + Z_4 + \beta_1 Z_3 +\beta_2 Z_2 + \beta_3 Z_1,\\
 <div class="task">
 <p>Consider a modification of the previous time series <span class="math inline">\(X_n\)</span>, keeping <span class="math inline">\(AR\)</span>-part: <span class="math inline">\(Y_n=\frac1{12} Y_{n-1}+\frac12 Y_{n-2}+Z_n + 2Z_{n-1}+3Z_{n-2} + 4 Z_{n-3}\)</span>. Choose <span class="math inline">\(Z_{-1}=0\)</span> (note that in Python, if <code>a</code> is an array or list, then <code>a[-1]</code> means the last element of this array), and <span class="math inline">\(Y_0=Y_1=1\)</span>. Generate <span class="math inline">\(10^4\)</span> values and assign them to <code>y</code>.</p>
 <p>Let’s plot both <span class="math inline">\(\{X_n\}\)</span> and <span class="math inline">\(\{Y_n\}\)</span> on the same diagram:</p>
-<div id="cd04594c" class="cell" data-execution_count="7">
+<div id="23fd280f" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>plt.plot(y, color <span class="op">=</span> <span class="st">"blue"</span>, label <span class="op">=</span> <span class="st">"Y"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>plt.plot(x, color <span class="op">=</span> <span class="st">"red"</span>, label <span class="op">=</span> <span class="st">"X"</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
